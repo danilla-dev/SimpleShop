@@ -13,7 +13,7 @@ const Categories = ({ icon }) => {
 
 	const allCategories = categories.map((category, index) => {
 		return (
-			<li className={`categories-list__category  ${category.cName}`} key={index}>
+			<li className={`categories-main-list__category  ${category.cName}`} key={index}>
 				<Link to={category.path} className={category.cName}>
 					{category.title}
 				</Link>
@@ -27,13 +27,15 @@ const Categories = ({ icon }) => {
 		transform: 'rotate(180deg)',
 	}
 	return (
-		<div className='categories'>
-			<p className='categories-text'>
+		<div className='categories-main'>
+			<p className='categories-main-text'>
 				{icon ? icon : null}
 				Categories
 				<BsFillCaretDownFill style={isShowed ? arrowStyles : null} onClick={showCategories} />
 			</p>
-			<ul className={!isShowed ? `categories-list categories-list--hide` : 'categories-list'}>{allCategories}</ul>
+			<ul className={!isShowed ? `categories-main-list categories-main-list--hide` : 'categories-main-list'}>
+				{allCategories}
+			</ul>
 		</div>
 	)
 }

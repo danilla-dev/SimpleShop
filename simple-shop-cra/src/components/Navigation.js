@@ -1,34 +1,34 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBasketShopping, faBars } from '@fortawesome/free-solid-svg-icons'
-import MobileMenu from '../components/MobileMenu'
+import { faBasketShopping, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { PiSpiralFill } from 'react-icons/pi'
+import MenuItems from '../components/MenuItems'
 import '../styles/Navigation.scss'
 
 const Navigation = () => {
-	const [isActive, setActive] = React.useState(false)
-	let menuVar = null
+	const [isShowed, setShow] = React.useState(false)
 	const showMenu = () => {
-		setActive(!isActive)
-		console.log('dziala')
-	}
-	if (isActive) {
-		menuVar = 'menu--active'
-	} else {
-		menuVar = 'menu--hide'
+		setShow(!isShowed)
+		console.log('klikniety')
 	}
 
 	return (
 		<nav className='nav'>
 			<div className='nav__container wrapper'>
 				<div className='nav__logo'>
-					<FontAwesomeIcon className='nav__logo-icon' icon={faBasketShopping} />
-					<span className='nav__logo-text'>SimpleShop</span>
+					<PiSpiralFill className='nav__logo-icon' icon={faBasketShopping} />
+					<span className='nav__logo-text'>InterStore</span>
 				</div>
-				<button onClick={showMenu} className='nav__menu-button'>
-					<FontAwesomeIcon className='nav__menu-icon' icon={faBars} />
+				<button onClick={showMenu} className='nav__menu-show-button'>
+					<FontAwesomeIcon className='nav__menu-show-icon' icon={faBars} />
 				</button>
 			</div>
-			<MobileMenu click={showMenu} className={`menu ${menuVar}`} />
+			<div className={isShowed ? 'nav__menu nav__menu--active' : 'nav__menu'}>
+				<button onClick={showMenu} className='nav__menu-close-button'>
+					<FontAwesomeIcon className='nav__menu-close-icon' icon={faXmark} />
+				</button>
+				{<MenuItems click={showMenu} />}
+			</div>
 		</nav>
 	)
 }

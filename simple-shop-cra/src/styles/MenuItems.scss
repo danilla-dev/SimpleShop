@@ -1,0 +1,70 @@
+.menu-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	list-style: none;
+	height: 100%;
+	.categories {
+		color: white;
+		&-text {
+			font-size: 3rem;
+			padding: 0;
+		}
+		&-list {
+			background-color: black;
+			&__category {
+				width: 70%;
+				border-bottom: 2px solid rgba(192, 192, 192, 0.2);
+			}
+		}
+		&-icon {
+			font-size: 3rem;
+			margin: 0 0.5em;
+		}
+	}
+	li {
+		a {
+			color: whitesmoke;
+			text-decoration: none;
+			font-size: 3rem;
+		}
+		svg {
+			font-size: 3rem;
+			margin: 0 0.5em;
+		}
+	}
+}
+
+// import './styles/App.css'
+// import React, { Component } from 'react'
+// import { BrowserRouter as Router, Link, Route, Switch, NavLink } from 'react-router-dom'
+// import Header from './layouts/Header'
+// import MainPage from './layouts/MainPage'
+// import AccountPanel from './layouts/AccountPanel'
+// import Footer from './layouts/Footer'
+// import Categories from './layouts/Categories'
+
+// class App extends Component {
+// 	render() {
+// 		return (
+// 			<Router>
+// 				<div className='App'>
+// 					<header>{<Header />}</header>
+// 					<main>
+// 						<section className='main-page'>{<MainPage />}</section>
+// 						<section style={{ height: 400 }} />
+// 						<aside>
+// 							<Switch>
+// 								{/* <Route path='/' exact component={Categories}></Route> */}
+// 								<Route path='*' component={AccountPanel}></Route>
+// 							</Switch>
+// 						</aside>
+// 					</main>
+// 					<footer>{<Footer />}</footer>
+// 				</div>
+// 			</Router>
+// 		)
+// 	}
+// }
+
+// export default App w takiej strukturze sekcja MainPage wyswietla sie zawszew nad rozwijanym meu w Header nawt po zastowowaniu position fixed na tym menu i nadania z-index jak moge roz rozwiązać

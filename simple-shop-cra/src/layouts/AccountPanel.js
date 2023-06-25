@@ -1,6 +1,6 @@
 import React from 'react'
 const AccountPanel = () => {
-	return <p>asdasd</p>
+	return <p></p>
 }
 
 export default AccountPanel

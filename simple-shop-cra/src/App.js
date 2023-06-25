@@ -11,13 +11,13 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div className='App'>
+				<div className='App app-container'>
 					<header>{<Header />}</header>
 					<main>
-						<section className='main-page'>{<MainPage />}</section>
+						<section>{<MainPage />}</section>
 						<aside>
 							<Switch>
-								<Route path='/' exact component={Categories}></Route>
+								{/* <Route path='/' exact component={Categories}></Route> */}
 								<Route path='*' component={AccountPanel}></Route>
 							</Switch>
 						</aside>

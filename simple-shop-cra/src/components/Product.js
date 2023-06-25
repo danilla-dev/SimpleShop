@@ -1,0 +1,24 @@
+import React from 'react'
+
+const products = [
+	{ title: 'Gun', category: 'guns', price: 20 },
+	{ title: 'Plumbus', category: 'other', price: 20 },
+	{ title: 'Portal-gun', category: 'special', price: 20 },
+]
+const Product = props => {
+	const searchCategory = props.match.params.id
+	let filterProducts = products.filter(product => product.category === searchCategory)
+	const allProducts = filterProducts.map((product, index) => {
+		return (
+			/// its a very basic display of product card with filter - must make better
+			<li>
+				<h2>{product.title}</h2>
+				<p>{product.category}</p>
+				<p>{product.price}</p>
+			</li>
+		)
+	})
+	return <ul>{allProducts}</ul>
+}
+
+export default Product

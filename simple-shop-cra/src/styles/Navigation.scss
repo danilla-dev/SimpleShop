@@ -1,25 +1,73 @@
+@keyframes portal-animation {
+	from {
+		transform: rotate(0) scale(1);
+	}
+	12% {
+		transform: rotate(90deg) scale(1.4);
+	}
+	25% {
+		transform: rotate(180deg) scale(1.1);
+	}
+	38% {
+		transform: rotate(270deg) scale(1.4);
+	}
+	49% {
+		transform: rotate(360deg) scale(1.2);
+	}
+	64% {
+		transform: rotate(270deg) scale(1.5);
+	}
+	73% {
+		transform: rotate(180deg) scale(1.1);
+	}
+	85% {
+		transform: rotate(90deg) scale(1.3);
+	}
+	to {
+		transform: rotate(0) scale(1);
+	}
+}
+
 .wrapper {
 	margin-right: auto; /* 1 */
 	margin-left: auto; /* 1 */
 	max-width: 1200px;
 }
+
 .nav {
+	position: fixed;
+	top: 0;
 	background-color: #00693e;
-	background: rgb(0, 105, 62);
-	background: linear-gradient(0deg, rgba(0, 105, 62, 1) 15%, rgba(25, 168, 109, 1) 55%, rgba(0, 105, 62, 1) 93%);
+	background: rgb(66, 135, 106);
+	background: radial-gradient(circle, rgba(66, 135, 106, 1) 4%, rgba(63, 143, 110, 1) 18%, rgba(1, 140, 83, 1) 93%);
+	width: 100%;
+	overflow: hidden;
+	height: 70px;
+	button {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		svg {
+			padding: 0.3em;
+			font-size: 4rem;
+		}
+	}
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 	&__logo {
+		display: flex;
+		align-items: center;
 		min-width: 50%;
 		padding: 1.5em;
-		color: #b2f8e5;
+		color: #d5e9e3;
 
 		&-icon {
-			font-size: 3rem;
+			font-size: 4rem;
 			margin-right: 0.3em;
+			animation: portal-animation 10s linear infinite;
 		}
 		&-text {
 			font-size: 3rem;
@@ -27,15 +75,27 @@
 		}
 	}
 	&__menu {
-		&-button {
-			background-color: transparent;
-			border: none;
-			cursor: pointer;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: flex-start;
+		justify-content: space-between;
+		position: fixed;
+		top: 0;
+		right: 0%;
+		transform: translateX(100%);
+		background-color: black;
+		height: 100vh;
+		width: 100%;
+		z-index: 1000;
+		transition: transform 0.3s;
+		&--active {
+			transform: translateX(0%);
 		}
-		&-icon {
-			padding: 0.3em;
-			font-size: 4rem;
-			color: #b2f8e5;
+		&-show-icon {
+			color: #d5e9e3;
+		}
+		&-close-icon {
+			color: whitesmoke;
 		}
 	}
 }
