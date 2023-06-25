@@ -18,7 +18,7 @@ const Product = props => {
 	const allProducts = filterProducts.map((product, index) => {
 		return (
 			/// its a very basic display of product card with filter - must make better
-			<li>
+			<li key={index}>
 				<h2>{product.title}</h2>
 				<p>{product.category}</p>
 				<p>{product.price}</p>
