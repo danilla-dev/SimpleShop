@@ -1,9 +1,9 @@
 import React from 'react'
 
 const products = [
-	{ title: 'Gun', category: 'guns', price: 20 },
-	{ title: 'Plumbus', category: 'other', price: 20 },
-	{ title: 'Portal-gun', category: 'special', price: 20 },
+	{ title: 'Gun', category: 'guns', price: 20, image: '', path: '' },
+	{ title: 'Plumbus', category: 'other', price: 20, image: '', path: '' },
+	{ title: 'Portal-gun', category: 'special', price: 20, image: '', path: '' },
 ]
 const Product = props => {
 	const searchCategory = props.match.params.id
@@ -14,7 +14,6 @@ const Product = props => {
 	} else {
 		filterProducts = products
 	}
-
 
 	const allProducts = filterProducts.map((product, index) => {
 		return (
