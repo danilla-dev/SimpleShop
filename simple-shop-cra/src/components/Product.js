@@ -7,7 +7,15 @@ const products = [
 ]
 const Product = props => {
 	const searchCategory = props.match.params.id
-	let filterProducts = products.filter(product => product.category === searchCategory)
+	let filterProducts
+
+	if (searchCategory) {
+		filterProducts = products.filter(product => product.category === searchCategory)
+	} else {
+		filterProducts = products
+	}
+
+
 	const allProducts = filterProducts.map((product, index) => {
 		return (
 			/// its a very basic display of product card with filter - must make better

@@ -7,6 +7,7 @@ const Products = () => {
 		<ul style={{ listStyle: 'none' }}>
 			<Switch>
 				<Route path={'/products/:id'} exact component={Product}></Route>
+				<Route path={'/products/'} exact component={Product}></Route>
 			</Switch>
 		</ul>
 	)
