@@ -7,6 +7,7 @@ import AccountPanel from './layouts/AccountPanel'
 import Footer from './layouts/Footer'
 import Categories from './layouts/Categories'
 
+
 class App extends Component {
 	render() {
 		return (

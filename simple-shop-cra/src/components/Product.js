@@ -1,9 +1,28 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 const products = [
-	{ title: 'Gun', category: 'guns', price: 20, image: '', path: '' },
-	{ title: 'Plumbus', category: 'other', price: 20, image: '', path: '' },
-	{ title: 'Portal-gun', category: 'special', price: 20, image: '', path: '' },
+	{
+		title: 'Ray gun',
+		category: 'Guns',
+		price: 20,
+		image: 'https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg',
+		path: '',
+	},
+	{
+		title: 'Plumbus',
+		category: 'Other',
+		price: 20,
+		image: 'https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/plumbus-sm.jpg',
+		path: '',
+	},
+	{
+		title: 'Portal-gun',
+		category: 'Special',
+		price: 20,
+		image: 'https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg',
+		path: '',
+	},
 ]
 const Product = props => {
 	const searchCategory = props.match.params.id
@@ -17,15 +36,23 @@ const Product = props => {
 
 	const allProducts = filterProducts.map((product, index) => {
 		return (
-			/// its a very basic display of product card with filter - must make better
 			<li key={index}>
-				<h2>{product.title}</h2>
-				<p>{product.category}</p>
-				<p>{product.price}</p>
+				<div className='main-product'>
+					<img className='main-product__img' src={product.image} alt='' />
+					<h3 className='main-product__name'>{product.title}</h3>
+					<p className='main-product__category'>{product.category}</p>
+					<div className='main-product__action-buttons'>
+						<button className='main-product__action-buttons-buy'>{product.price} Buy</button>
+						<button className='main-product__action-buttons-add'>
+							Add to cart
+							<FontAwesomeIcon className='cart-icon' icon={faCartShopping} />
+						</button>
+					</div>
+				</div>
 			</li>
 		)
 	})
-	return <ul>{allProducts}</ul>
+	return <ul className='products-main-page__list'>{allProducts}</ul>
 }
 
 export default Product

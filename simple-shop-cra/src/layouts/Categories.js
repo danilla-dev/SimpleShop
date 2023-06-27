@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import '../styles/Categories.scss'
 import { BsFillCaretDownFill } from 'react-icons/bs'
 const categories = [
-	{ title: 'Guns', cName: 'guns-category', path: '/products/guns' },
-	{ title: 'Other', cName: 'other-category', path: '/products/other' },
-	{ title: 'Special', cName: 'special-category', path: '/products/special' },
+	{ title: 'Guns', cName: 'guns-category', path: '/products/Guns' },
+	{ title: 'Other', cName: 'other-category', path: '/products/Other' },
+	{ title: 'Special', cName: 'special-category', path: '/products/Special' },
 ]
 
 const Categories = ({ icon }) => {
