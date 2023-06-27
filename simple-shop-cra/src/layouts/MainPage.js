@@ -7,6 +7,7 @@ const MainPage = () => {
 		<div className='main-page'>
 			<Categories />
 			<Products />
+			
 		</div>
 	)
 }

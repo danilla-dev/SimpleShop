@@ -14,6 +14,11 @@
 	border: 1px solid silver;
 	border-radius: 10px;
 	overflow: hidden;
+	transition: transform 0.4s;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.03);
+	}
 	&__img {
 		width: 300px;
 		height: 300px;
@@ -42,10 +47,15 @@
 			border-radius: 10px;
 			font-size: 2rem;
 			font-weight: bold;
-			color: #297373;
-			color: #61a394;
+			color: #5d9377;
 			background-color: rgb(236, 233, 233);
+			transition: background-color 0.2s, color 0.2s, transform 0.3s;
 			cursor: pointer;
+			&:hover {
+				color: #78c2a6;
+				background-color: rgb(235, 233, 233);
+				transform: scale(1.05);
+			}
 		}
 		&-add {
 			margin-top: 0.5em;
@@ -53,5 +63,20 @@
 		.cart-icon {
 			margin-left: 0.5em;
 		}
+	}
+}
+@media (min-width: 768px) {
+	.products-main-page__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
+	}
+	.main-product {
+		max-width: 500px;
+	}
+}
+@media (min-width: 996px) {
+	.products-main-page__list {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }

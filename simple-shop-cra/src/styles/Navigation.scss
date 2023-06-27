@@ -43,6 +43,7 @@
 	width: 100%;
 	overflow: hidden;
 	height: 70px;
+	z-index: 1000;
 	button {
 		background-color: transparent;
 		border: none;
@@ -86,7 +87,6 @@
 		background-color: black;
 		height: 100vh;
 		width: 100%;
-		z-index: 1000;
 		transition: transform 0.3s;
 		&--active {
 			transform: translateX(0%);

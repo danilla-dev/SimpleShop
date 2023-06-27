@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../styles/Categories.scss'
 import { BsFillCaretDownFill } from 'react-icons/bs'
 const categories = [
+	{ title: 'All', cName: 'all-category', path: '/products/' },
 	{ title: 'Guns', cName: 'guns-category', path: '/products/Guns' },
 	{ title: 'Other', cName: 'other-category', path: '/products/Other' },
 	{ title: 'Special', cName: 'special-category', path: '/products/Special' },
@@ -13,7 +14,7 @@ const Categories = ({ icon }) => {
 
 	const allCategories = categories.map((category, index) => {
 		return (
-			<li className={`categories-list__category  ${category.cName}`} key={index}>
+			<li className={`categories-list__category`} key={index}>
 				<Link to={category.path} className={category.cName}>
 					{category.title}
 				</Link>

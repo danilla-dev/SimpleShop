@@ -1,5 +1,5 @@
 import React from 'react'
-import heroImage from '../images/header-mobile.jpg'
+import heroImage from '../images/header-desktop.jpg'
 import '../styles/HeaderImage.scss'
 
 const HeaderImage = () => {

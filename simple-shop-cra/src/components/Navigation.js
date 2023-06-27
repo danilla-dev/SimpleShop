@@ -17,7 +17,7 @@ const Navigation = () => {
 			<div className='nav__container wrapper'>
 				<div className='nav__logo'>
 					<PiSpiralFill className='nav__logo-icon' icon={faBasketShopping} />
-					<span className='nav__logo-text'>InterStore</span>
+					<h1 className='nav__logo-text'>InterStore</h1>
 				</div>
 				<button onClick={showMenu} className='nav__menu-show-button'>
 					<FontAwesomeIcon className='nav__menu-show-icon' icon={faBars} />
