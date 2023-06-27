@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 const products = [
@@ -33,7 +33,6 @@ const Product = props => {
 	} else {
 		filterProducts = products
 	}
-
 	const allProducts = filterProducts.map((product, index) => {
 		return (
 			<li key={index}>
@@ -52,7 +51,16 @@ const Product = props => {
 			</li>
 		)
 	})
-	return <ul className='products-main-page__list'>{allProducts}</ul>
+
+	return (
+		<>
+			<p className='products-main-page__counter'>
+				Count of products:
+				<span>{filterProducts.length}</span>
+			</p>
+			<ul className='products-main-page__list'>{allProducts}</ul>
+		</>
+	)
 }
 
 export default Product
