@@ -8,6 +8,7 @@ const Products = () => {
 			<Switch>
 				<Route path={'/products/:id'} exact component={Product}></Route>
 				<Route path={'/products/'} exact component={Product}></Route>
+				<Route path={'/'} exact component={Product}></Route>
 			</Switch>
 		</ul>
 	)
