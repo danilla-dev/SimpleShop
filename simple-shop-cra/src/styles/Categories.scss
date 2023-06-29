@@ -1,5 +1,6 @@
 @keyframes show-categories {
 	from {
+		position: absolute;
 		height: 0;
 		overflow: hidden;
 		opacity: 0;
@@ -14,12 +15,12 @@
 	from {
 		height: 185px;
 		overflow: visible;
-		opacity: 1;
+		// opacity: 1;
 	}
 	to {
 		height: 0;
 		overflow: hidden;
-		opacity: 0;
+		// opacity: 0;
 	}
 }
 
@@ -35,11 +36,11 @@
 		height: 0;
 		background-color: silver;
 		list-style: none;
-		animation: show-categories 0.3s forwards;
+		animation: show-categories 0.2s forwards;
+
 		&--hide {
 			animation: hide-categories 0.2s forwards;
 		}
-
 		&__category {
 			padding: 1em;
 			width: 100%;
@@ -64,6 +65,30 @@
 			transform: rotate(0);
 			transition: transform 0.2s;
 			margin-left: 0.4em;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.main-page {
+		display: flex;
+		background-color: none;
+		.categories {
+			width: 25%;
+			&-list {
+				height: 200px;
+				animation: none;
+				li {
+					text-align: left;
+					a {
+						margin-left: 1em;
+					}
+				}
+			}
+			&-text {
+				svg {
+					display: none;
+				}
+			}
 		}
 	}
 }

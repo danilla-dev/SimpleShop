@@ -4,10 +4,9 @@ import Products from '../components/Products'
 
 const MainPage = () => {
 	return (
-		<div className='main-page'>
+		<div className='main-page wrapper'>
 			<Categories />
 			<Products />
-			
 		</div>
 	)
 }

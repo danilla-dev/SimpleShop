@@ -9,7 +9,6 @@ const Navigation = () => {
 	const [isShowed, setShow] = React.useState(false)
 	const showMenu = () => {
 		setShow(!isShowed)
-		console.log('klikniety')
 	}
 
 	return (
@@ -22,12 +21,12 @@ const Navigation = () => {
 				<button onClick={showMenu} className='nav__menu-show-button'>
 					<FontAwesomeIcon className='nav__menu-show-icon' icon={faBars} />
 				</button>
-			</div>
-			<div className={isShowed ? 'nav__menu nav__menu--active' : 'nav__menu'}>
-				<button onClick={showMenu} className='nav__menu-close-button'>
-					<FontAwesomeIcon className='nav__menu-close-icon' icon={faXmark} />
-				</button>
-				{<MenuItems click={showMenu} />}
+				<div className={isShowed ? 'nav__menu nav__menu--active' : 'nav__menu'}>
+					<button onClick={showMenu} className='nav__menu-close-button'>
+						<FontAwesomeIcon className='nav__menu-close-icon' icon={faXmark} />
+					</button>
+					{<MenuItems click={showMenu} />}
+				</div>
 			</div>
 		</nav>
 	)

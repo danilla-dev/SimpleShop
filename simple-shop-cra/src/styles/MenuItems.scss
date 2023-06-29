@@ -17,10 +17,6 @@
 				border-bottom: 2px solid rgba(192, 192, 192, 0.2);
 			}
 		}
-		&-icon {
-			font-size: 3rem;
-			margin: 0 0.5em;
-		}
 	}
 	li {
 		a {
@@ -31,6 +27,42 @@
 		svg {
 			font-size: 3rem;
 			margin: 0 0.5em;
+		}
+	}
+}
+@media (min-width: 1000px) {
+	.menu-list {
+		position: relative;
+		flex-direction: row;
+		align-items: center;
+		height: 70px;
+		background-color: transparent;
+		margin-right: 20px;
+		.categories {
+			color: white;
+			&-text {
+				font-size: 1.8rem;
+			}
+			&-list {
+				position: absolute;
+				top: 70px;
+				left: calc(50% + 1em);
+				width: 25%;
+				height: 200px;
+				transform: translateX(-50%);
+				background-color: rgb(66, 135, 106);
+				&__category {
+					width: 70%;
+					border-bottom: 2px solid rgba(192, 192, 192, 0.2);
+				}
+			}
+		}
+		li {
+			margin: 0 1em;
+			a,
+			svg {
+				font-size: 1.8rem;
+			}
 		}
 	}
 }

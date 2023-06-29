@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Categories.scss'
 import { BsFillCaretDownFill } from 'react-icons/bs'
+
 const categories = [
 	{ title: 'All', cName: 'all-category', path: '/products/' },
 	{ title: 'Guns', cName: 'guns-category', path: '/products/Guns' },
@@ -10,7 +11,10 @@ const categories = [
 ]
 
 const Categories = ({ icon }) => {
-	const [isShowed, setShow] = React.useState(false)
+	const [isShowed, setShow] = React.useState()
+
+
+
 
 	const allCategories = categories.map((category, index) => {
 		return (
@@ -21,6 +25,7 @@ const Categories = ({ icon }) => {
 			</li>
 		)
 	})
+
 	const showCategories = () => {
 		setShow(!isShowed)
 	}
