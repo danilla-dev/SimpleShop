@@ -6,7 +6,7 @@ const MainPage = () => {
 	return (
 		<div className='main-page wrapper'>
 			<Categories />
-			<Products />
+			<Products  />
 		</div>
 	)
 }

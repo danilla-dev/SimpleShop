@@ -1,23 +1,18 @@
 import React from 'react'
 import '../styles/MenuItems.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faHouse, faRightToBracket, faUserPlus, faTag } from '@fortawesome/free-solid-svg-icons'
+import { faBoxOpen, faCartShopping, faRightToBracket, faUserPlus, faTag } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-import '../styles/MenuItems.scss'
+
 import Categories from '../layouts/Categories'
 
+import '../styles/MenuItems.scss'
 let menuItems = [
 	{
-		title: 'Home',
-		icon: <FontAwesomeIcon icon={faHouse} />,
-		path: '/',
-		cName: 'menu-home',
-	},
-	{
-		title: 'Products',
-		icon: <FontAwesomeIcon icon={faCartPlus} />,
-		path: '/products',
-		cName: 'menu-products',
+		title: 'Cart',
+		icon: <FontAwesomeIcon icon={faCartShopping} />,
+		path: '/cart',
+		cName: 'menu-cart',
 	},
 ]
 const unloggedUserItems = [
@@ -49,11 +44,11 @@ const loggedUserItems = [
 	},
 ]
 
-const MenuItems = ({ click }) => {
+const MenuItems = ({ showHideMenu }) => {
 	const storeItems = menuItems.map((item, index) => {
 		return (
 			<li key={index} className={item.cName}>
-				<Link onClick={click} to={item.path}>
+				<Link onClick={showHideMenu} to={item.path}>
 					{item.icon}
 					<span>{item.title}</span>
 				</Link>
@@ -63,7 +58,7 @@ const MenuItems = ({ click }) => {
 	const loginItems = unloggedUserItems.map((item, index) => {
 		return (
 			<li key={index} className={item.cName}>
-				<Link onClick={click} to={item.path}>
+				<Link onClick={showHideMenu} to={item.path}>
 					{item.icon}
 					<span>{item.title}</span>
 				</Link>
@@ -72,10 +67,10 @@ const MenuItems = ({ click }) => {
 	})
 	return (
 		<ul className='menu-list'>
-			{storeItems}
 			<li>
-				<Categories icon={<FontAwesomeIcon className='categories-icon' icon={faTag} />} />
+				<Categories showHideMenu={showHideMenu} icon={<FontAwesomeIcon className='categories-icon' icon={faTag} />} />
 			</li>
+			{storeItems}
 			{loginItems}
 		</ul>
 	)

@@ -1,5 +1,5 @@
 .main-product {
-	margin: 3em 0;
+	margin-bottom: 3em;
 	background-color: #6bce8c;
 	background-image: radial-gradient(circle, #6bce8c, #4aae6d);
 	border: 1px solid silver;
@@ -24,12 +24,24 @@
 		font-size: 1.6rem;
 		margin-bottom: 0.5em;
 	}
+	&__price {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0.25em 0;
+		font-size: 3rem;
+		font-weight: bold;
+		border-top: 1px solid #3c7950;
+		border-bottom: 1px solid #3c7950;
+		svg {
+			color: white;
+			margin-left: 0.1em;
+		}
+	}
 	&__action-buttons {
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		border-top: 1px solid black;
 		padding: 1em;
 		&-add,
 		&-buy {
@@ -42,15 +54,11 @@
 			background-color: rgb(236, 233, 233);
 			transition: background-color 0.2s, color 0.2s, transform 0.3s;
 			cursor: pointer;
-
 			&:hover {
 				color: #78c2a6;
 				background-color: rgb(235, 233, 233);
 				transform: scale(1.05);
 			}
-		}
-		&-add {
-			margin-top: 0.5em;
 		}
 		.cart-icon {
 			margin-left: 0.5em;
@@ -63,6 +71,18 @@
 			width: 250px;
 			height: 250px;
 		}
+		&__name {
+			font-size: 2rem;
+		}
+		&__price {
+			font-size: 2rem;
+		}
+		&__action-buttons {
+			&-add,
+			&-buy {
+				font-size: 1.4rem;
+			}
+		}
 	}
 }
 @media (min-width: 576px) {
@@ -71,6 +91,12 @@
 			width: 250px;
 			height: 250px;
 		}
+		&__action-buttons {
+			&-add,
+			&-buy {
+				font-size: 1.6rem;
+			}
+		}
 	}
 }
 @media (min-width: 1000px) {
@@ -78,6 +104,12 @@
 		&__img {
 			width: 300px;
 			height: 300px;
+		}
+		&__action-buttons {
+			&-add,
+			&-buy {
+				font-size: 2rem;
+			}
 		}
 	}
 }

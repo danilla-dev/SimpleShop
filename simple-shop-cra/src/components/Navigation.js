@@ -25,7 +25,7 @@ const Navigation = () => {
 					<button onClick={showMenu} className='nav__menu-close-button'>
 						<FontAwesomeIcon className='nav__menu-close-icon' icon={faXmark} />
 					</button>
-					{<MenuItems click={showMenu} />}
+					{<MenuItems showHideMenu={showMenu} />}
 				</div>
 			</div>
 		</nav>

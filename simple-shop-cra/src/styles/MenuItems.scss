@@ -46,10 +46,9 @@
 			&-list {
 				position: absolute;
 				top: 70px;
-				left: calc(50% + 1em);
+				left: 0;
 				width: 25%;
 				height: 200px;
-				transform: translateX(-50%);
 				background-color: rgb(66, 135, 106);
 				&__category {
 					width: 70%;

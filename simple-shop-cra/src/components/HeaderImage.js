@@ -1,13 +1,13 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-import heroImageDesktop from '../images/header-desktop.jpg'
-import heroImageMobile from '../images/header-mobile.jpg'
+import heroImageDesktop from '../images/header-desktop.png'
+import heroImageMobile from '../images/header-mobile.png'
 import '../styles/HeaderImage.scss'
 
 const HeaderImage = () => {
-	const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-	const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' })
+	const isMobile = useMediaQuery({ query: '(max-width: 1100px)' })
+	const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 1101px)' })
 
 	return (
 		<div className='header-image'>
