@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 
 import '../styles/Categories.scss'
 
+/// tutaj bede pobieral kategorie z bazy dabych 
 const categories = [
 	{ title: 'All', cName: 'all-category', path: '/products/' },
 	{ title: 'Guns', cName: 'guns-category', path: '/products/Guns' },
@@ -20,6 +21,7 @@ const Categories = ({ icon, showHideMenu }) => {
 	const showCategories = () => {
 		setShow(!isShowed)
 	}
+
 	const scrollToProducts = () => {
 		if (showHideMenu) {
 			showHideMenu()
