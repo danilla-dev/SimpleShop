@@ -1,4 +1,4 @@
-import './styles/App.css'
+import './styles/App.scss'
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch, NavLink } from 'react-router-dom'
 import Header from './layouts/Header'

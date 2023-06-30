@@ -1,115 +1,131 @@
-.main-product {
-	margin-bottom: 3em;
-	background-color: #6bce8c;
-	background-image: radial-gradient(circle, #6bce8c, #4aae6d);
-	border: 1px solid silver;
-	border-radius: 10px;
-	overflow: hidden;
-	transition: transform 0.4s;
-	cursor: pointer;
+@import "colors";
 
-	&:hover {
-		transform: scale(1.03);
-	}
-	&__img {
-		width: 300px;
-		height: 300px;
-	}
-	&__name {
-		text-align: center;
-		font-size: 2.5rem;
-	}
-	&__category {
-		text-align: center;
-		font-size: 1.6rem;
-		margin-bottom: 0.5em;
-	}
-	&__price {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 0.25em 0;
-		font-size: 3rem;
-		font-weight: bold;
-		border-top: 1px solid #3c7950;
-		border-bottom: 1px solid #3c7950;
-		svg {
-			color: white;
-			margin-left: 0.1em;
-		}
-	}
-	&__action-buttons {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		padding: 1em;
-		&-add,
-		&-buy {
-			padding: 0.5em 1em;
-			border: transparent;
-			border-radius: 10px;
-			font-size: 2rem;
-			font-weight: bold;
-			color: #5d9377;
-			background-color: rgb(236, 233, 233);
-			transition: background-color 0.2s, color 0.2s, transform 0.3s;
-			cursor: pointer;
-			&:hover {
-				color: #78c2a6;
-				background-color: rgb(235, 233, 233);
-				transform: scale(1.05);
-			}
-		}
-		.cart-icon {
-			margin-left: 0.5em;
-		}
-	}
+.main-product {
+  position: relative;
+  margin-bottom: 3em;
+  border-radius: 10px;
+  border: 2px solid $card-border;
+  transition: box-shadow 0.2s;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $card-background;
+    backdrop-filter: blur(1.6px);
+    -webkit-backdrop-filter: blur(1.6px);
+    z-index: -1;
+  }
+  &__img {
+    width: 300px;
+    height: 300px;
+  }
+  &__name {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  &__category {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25em 0;
+    font-size: 3rem;
+    font-weight: bold;
+    border-top: 1px solid #3c79505f;
+    border-bottom: 1px solid #3c79505f;
+
+    svg {
+      color: $money-color;
+      margin-left: 0.1em;
+    }
+  }
+  &__action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    &-add {
+      padding: 0.5em 1em;
+      transform: scale(1.05);
+      border: transparent;
+      border-radius: 10px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      background-color: $button-card;
+      color: $button-card-font;
+      font-size: 2rem;
+      font-weight: bold;
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover {
+        background: $button-card-hover;
+        color: $button-card-font-hover;
+        backdrop-filter: blur(1.6px);
+        -webkit-backdrop-filter: blur(1.6px);
+      }
+    }
+    .cart-icon {
+      margin-left: 0.5em;
+    }
+  }
 }
 @media (max-width: 320px) {
-	.main-product {
-		&__img {
-			width: 250px;
-			height: 250px;
-		}
-		&__name {
-			font-size: 2rem;
-		}
-		&__price {
-			font-size: 2rem;
-		}
-		&__action-buttons {
-			&-add,
-			&-buy {
-				font-size: 1.4rem;
-			}
-		}
-	}
+  .main-product {
+    &__img {
+      width: 250px;
+      height: 250px;
+    }
+    &__name {
+      font-size: 2rem;
+    }
+    &__price {
+      font-size: 2rem;
+    }
+    &__action-buttons {
+      &-add,
+      &-buy {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
 @media (min-width: 576px) {
-	.main-product {
-		&__img {
-			width: 250px;
-			height: 250px;
-		}
-		&__action-buttons {
-			&-add,
-			&-buy {
-				font-size: 1.6rem;
-			}
-		}
-	}
+  .main-product {
+    &__img {
+      width: 250px;
+      height: 250px;
+    }
+    &__action-buttons {
+      &-add,
+      &-buy {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }
 @media (min-width: 1000px) {
-	.main-product {
-		&__img {
-			width: 300px;
-			height: 300px;
-		}
-		&__action-buttons {
-			&-add,
-			&-buy {
-				font-size: 2rem;
-			}
-		}
-	}
+  .main-product {
+    &__img {
+      width: 300px;
+      height: 300px;
+    }
+    &__action-buttons {
+      &-add,
+      &-buy {
+        font-size: 2rem;
+      }
+    }
+  }
 }
