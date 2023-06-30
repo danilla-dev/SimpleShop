@@ -1,12 +1,13 @@
 @import "colors";
 
 .products-main-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: $products-section-background;
-  // background-image: $products-section-gradient;
+  z-index: 1;
   &__list {
     list-style: none;
   }
