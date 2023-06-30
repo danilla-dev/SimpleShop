@@ -4,13 +4,9 @@ import { faArrowUp91, faArrowUp19 } from "@fortawesome/free-solid-svg-icons";
 import { TfiLayoutListThumbAlt, TfiLayoutGrid2Alt } from "react-icons/tfi";
 
 const ProductsActions = (props) => {
-  const [sortFromLowest, setSortFromLowest] = useState(false);
-  const [listDistplay, setListDisplay] = useState(false);
+  const { products, sortFnc, display, displayFnc, sortFromLowest } = props;
 
-  const products = props.products;
-  const sortFnc = props.sort;
-
-  const displayIcon = listDistplay ? (
+  const displayIcon = display ? (
     <TfiLayoutGrid2Alt />
   ) : (
     <TfiLayoutListThumbAlt />

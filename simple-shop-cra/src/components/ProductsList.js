@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Product from "./Product";
 import ProductsActions from "./ProductsActions";
@@ -10,7 +10,7 @@ const products = [
   {
     title: "Ray gun",
     category: "Guns",
-    price: 20,
+    price: 200,
     imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
     imageDesk:
@@ -30,7 +30,7 @@ const products = [
   {
     title: "Portal-gun",
     category: "Special",
-    price: 20,
+    price: 200,
     imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
     imageDesk:
@@ -40,7 +40,7 @@ const products = [
   {
     title: "Portal-gun",
     category: "Special",
-    price: 20,
+    price: 200,
     imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
     imageDesk:
@@ -50,7 +50,7 @@ const products = [
   {
     title: "Portal-gun",
     category: "Special",
-    price: 20,
+    price: 200,
     imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
     imageDesk:
@@ -60,7 +60,7 @@ const products = [
   {
     title: "Portal-gun",
     category: "Special",
-    price: 20,
+    price: 200,
     imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
     imageDesk:
@@ -70,7 +70,7 @@ const products = [
   {
     title: "Portal-gun",
     category: "Special",
-    price: 20,
+    price: 320,
     imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
     imageDesk:
@@ -78,7 +78,11 @@ const products = [
     path: "",
   },
 ];
+products.sort((a, b) => a.price - b.price).reverse();
 const ProductsList = (props) => {
+  const [listDisplay, setListDisplay] = useState(false);
+  const [sortFromLowest, setSortFromLowest] = useState(false);
+
   const searchCategory = props.match.params.id;
   let filterProducts;
 
@@ -91,13 +95,23 @@ const ProductsList = (props) => {
   }
 
   const sortProducts = () => {
-    console.log("sort");
+    filterProducts.reverse();
+    setSortFromLowest(!sortFromLowest);
   };
-	
+  const setDisplayOfProducts = () => {
+    console.log("display");
+  };
+
   return (
     <>
-      <ProductsActions sort={sortProducts} products={filterProducts} />
-      <Product filterProducts={filterProducts} />
+      <ProductsActions
+        display={listDisplay}
+        sortFnc={sortProducts}
+        displayFnc={setDisplayOfProducts}
+        products={filterProducts}
+        sortFromLowest={sortFromLowest}
+      />
+      <Product listDisplay={listDisplay} filterProducts={filterProducts} />
     </>
   );
 };
