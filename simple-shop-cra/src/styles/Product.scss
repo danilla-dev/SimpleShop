@@ -81,6 +81,15 @@
     }
   }
 }
+.products-actions {
+  background-color: gray;
+  width: 100%;
+  &__sort,
+  &__display {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
 @media (max-width: 320px) {
   .main-product {
     &__img {

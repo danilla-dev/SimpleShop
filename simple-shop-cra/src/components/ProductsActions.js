@@ -1,27 +1,32 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp91, faArrowUp19 } from "@fortawesome/free-solid-svg-icons";
-import { TfiLayoutListThumbAlt, TfiLayoutGrid2Alt } from "react-icons/tfi";
+
+import SearchForm from "./SearchForm";
+
+import {
+  faArrowUp91 as SortFromLowIcon,
+  faArrowUp19 as SortFromHighIcon,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  TfiLayoutListThumbAlt as ListIcon,
+  TfiLayoutGrid2Alt as GridIcon,
+} from "react-icons/tfi";
 
 const ProductsActions = (props) => {
   const { products, sortFnc, display, displayFnc, sortFromLowest } = props;
 
-  const displayIcon = display ? (
-    <TfiLayoutGrid2Alt />
-  ) : (
-    <TfiLayoutListThumbAlt />
-  );
+  const displayIcon = display ? <GridIcon /> : <ListIcon />;
 
   return (
     <div className="products-actions">
       <div className="products-actions__sort">
         <FontAwesomeIcon
           onClick={sortFnc}
-          icon={sortFromLowest ? faArrowUp91 : faArrowUp19}
+          icon={sortFromLowest ? SortFromHighIcon : SortFromLowIcon}
         />
       </div>
       <div className="products-actions__display">{displayIcon}</div>
-
+      <SearchForm />
       <p className="products-main-page__counter">
         Count of products:
         <span>{products.length}</span>
