@@ -1,0 +1,37 @@
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__label {
+    display: none;
+  }
+}
+.input-container {
+  position: relative;
+  &__input {
+    left: -40px;
+    height: 40px;
+    padding: 0.5em;
+    border-radius: 20px;
+    border: none;
+    font-size: 2rem;
+    border: 1px solid silver;
+  }
+  &__btn {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0.5em;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

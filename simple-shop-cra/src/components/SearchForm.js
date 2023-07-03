@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../styles/SearchForm.scss";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass as SearchIcon } from "@fortawesome/free-solid-svg-icons";
 

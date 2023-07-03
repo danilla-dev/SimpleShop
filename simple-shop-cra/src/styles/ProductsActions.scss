@@ -9,45 +9,15 @@
   &-buttons {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    padding: 2em 0;
     &__sort,
     &__display {
       text-align: center;
-      font-size: 3rem;
+      font-size: 2rem;
       cursor: pointer;
       right: 0;
     }
   }
 }
-.search-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &__label {
-    display: none;
-  }
-}
-.input-container {
-  position: relative;
-  &__input {
-    left: -40px;
-    height: 40px;
-    padding: 0.5em;
-    border-radius: 20px;
-    border: none;
-    font-size: 2rem;
-  }
-  &__btn {
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 35px;
-    padding: 0.5em;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    font-weight: bold;
-    cursor: pointer;
-  }
-}
+

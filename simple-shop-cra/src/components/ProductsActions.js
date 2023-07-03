@@ -34,7 +34,7 @@ const ProductsActions = (props) => {
           {displayIcon}
         </div>
       </div>
-      <SearchForm />
+    
       <p className="products-main-page__counter">
         Count of products:
         <span>{products.length}</span>

@@ -43,18 +43,10 @@
   background: $navigation-background-main;
   background: $navigation-gradient;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   height: 70px;
   z-index: 1000;
-  button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    svg {
-      padding: 0.3em;
-      font-size: 4rem;
-    }
-  }
+
   &__container {
     position: relative;
     display: flex;
@@ -93,6 +85,16 @@
     transition: transform 0.3s;
     &--active {
       transform: translateX(0%);
+    }
+    &-show-button,
+    &-close-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      svg {
+        padding: 0.3em;
+        font-size: 4rem;
+      }
     }
     &-show-icon {
       color: #d5e9e3;
