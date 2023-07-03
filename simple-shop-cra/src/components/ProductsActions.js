@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import SearchForm from "./SearchForm";
 
+import "../styles/ProductsActions.scss";
+
 import {
   faArrowUp91 as SortFromLowIcon,
   faArrowUp19 as SortFromHighIcon,
@@ -19,13 +21,19 @@ const ProductsActions = (props) => {
 
   return (
     <div className="products-actions">
-      <div className="products-actions__sort">
-        <FontAwesomeIcon
-          onClick={sortFnc}
-          icon={sortFromLowest ? SortFromHighIcon : SortFromLowIcon}
-        />
+      <div className="products-actions-buttons">
+        <div className="products-actions-buttons__sort">
+          Sort:
+          <FontAwesomeIcon
+            onClick={sortFnc}
+            icon={sortFromLowest ? SortFromHighIcon : SortFromLowIcon}
+          />
+        </div>
+        <div className="products-actions-buttons__display">
+          Display:
+          {displayIcon}
+        </div>
       </div>
-      <div className="products-actions__display">{displayIcon}</div>
       <SearchForm />
       <p className="products-main-page__counter">
         Count of products:

@@ -8,7 +8,6 @@ const MainPage = () => {
   const isTablet = useMediaQuery({ query: "(min-width:768px)" });
   return (
     <div className="main-page wrapper">
-      {/* {isTablet && <HelloRick />} */}
       <Categories />
       <Products />
     </div>
