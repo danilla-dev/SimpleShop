@@ -97,15 +97,20 @@
     background-color: none;
     .categories {
       width: 250px;
-      background-color: purple;
       &-list {
         height: 250px;
         animation: none;
+        background-color: transparent;
         li {
           text-align: left;
           a {
+            color: black;
             margin-left: 1em;
           }
+        }
+        &__category {
+          border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+          border-left: 2px solid rgba(0, 0, 0, 0.2);
         }
       }
       &-text {
@@ -123,7 +128,6 @@
   .main-page {
     .categories {
       width: 250px;
-      background-color: purple;
     }
   }
 }

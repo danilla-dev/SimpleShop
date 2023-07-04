@@ -31,6 +31,11 @@ header {
     max-width: 768px;
   }
 }
+@media (min-width: 845px) {
+  .wrapper {
+    max-width: 845px;
+  }
+}
 @media (min-width: 992px) {
   .wrapper {
     max-width: 992px;
