@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Product from "./Product";
 import ProductsActions from "./ProductsActions";
@@ -11,6 +11,36 @@ const products = [
     title: "Ray gun",
     category: "Guns",
     price: 200,
+    imageMobile:
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
+    imageDesk:
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-lg.jpg",
+    path: "",
+  },
+  {
+    title: "Ray gun",
+    category: "Guns",
+    price: 220,
+    imageMobile:
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
+    imageDesk:
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-lg.jpg",
+    path: "",
+  },
+  {
+    title: "Ray gun",
+    category: "Guns",
+    price: 300,
+    imageMobile:
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
+    imageDesk:
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-lg.jpg",
+    path: "",
+  },
+  {
+    title: "Ray gun",
+    category: "Guns",
+    price: 270,
     imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
     imageDesk:
@@ -93,9 +123,8 @@ const ProductsList = (props) => {
   } else {
     filterProducts = products;
   }
-
   const sortProducts = () => {
-    filterProducts.reverse();
+    products.reverse();
     setSortFromLowest(!sortFromLowest);
   };
   const setDisplayOfProducts = () => {
@@ -106,10 +135,10 @@ const ProductsList = (props) => {
     <>
       <ProductsActions
         display={listDisplay}
-        sortFnc={sortProducts}
         displayFnc={setDisplayOfProducts}
         products={filterProducts}
-        sortFromLowest={sortFromLowest}
+        sortFnc={sortProducts}
+        sortFromLowest={sortFromLowest} //state
       />
       <Product listDisplay={listDisplay} filterProducts={filterProducts} />
     </>
