@@ -12,26 +12,59 @@
 }
 .input-container {
   position: relative;
-  &__input {
-    left: -40px;
-    height: 40px;
-    padding: 0.5em;
-    border-radius: 20px;
-    border: none;
-    font-size: 2rem;
-    border: 1px solid silver;
-  }
   &__btn {
     position: absolute;
-    right: -10px;
+    right: -20px;
     top: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding: 0.5em;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 1px solid black;
+    border: none;
+    background-color: #609c85;
+    opacity: 0.5;
     font-weight: bold;
     cursor: pointer;
+    svg {
+      font-weight: bold;
+      color: white;
+      font-size: 2.5rem;
+    }
+  }
+  &__input {
+    height: 40px;
+    padding: 0 2em 0 1em;
+    border-radius: 20px;
+    border: none;
+    font-size: 2rem;
+    opacity: 0.5;
+    outline: 2px solid #456f5f;
+    box-shadow: 0 0 20px 1px #00000073;
+    &:focus {
+      opacity: 1;
+    }
+    &:focus + .input-container__btn {
+      opacity: 1;
+    }
+  }
+}
+@media (min-width: 375px) {
+  .search-form {
+    top: 100px;
+  }
+  .input-container {
+    &__input {
+      box-shadow: none;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .search-form {
+    top: 50%;
+    right: 250px;
+    left: unset;
+    z-index: 100;
   }
 }

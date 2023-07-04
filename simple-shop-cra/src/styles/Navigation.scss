@@ -57,7 +57,6 @@
     display: flex;
     align-items: center;
     padding: 1.5em;
-    margin-left: 20px;
     color: #d5e9e3;
 
     &-icon {
@@ -104,7 +103,19 @@
     }
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
+  .nav {
+    &__logo {
+      margin-left: 20px;
+    }
+    &__menu {
+      &-show-button {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+@media (min-width: 620px) {
   .nav {
     overflow: visible;
     &__menu {

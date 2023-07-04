@@ -22,12 +22,12 @@ const unloggedUserItems = [
 		path: '/login',
 		cName: 'menu-login',
 	},
-	{
-		title: 'SignUp',
-		icon: <FontAwesomeIcon icon={faUserPlus} />,
-		path: '/signUp',
-		cName: 'menu-signUp',
-	},
+	// {
+	// 	title: 'SignUp',
+	// 	icon: <FontAwesomeIcon icon={faUserPlus} />,
+	// 	path: '/signUp',
+	// 	cName: 'menu-signUp',
+	// },
 ]
 const loggedUserItems = [
 	{
