@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import SearchForm from "./SearchForm";
 import MenuItems from "../components/MenuItems";
 
@@ -24,7 +26,9 @@ const Navigation = () => {
       <div className="nav__container wrapper">
         <div className="nav__logo">
           <PiSpiralFill className="nav__logo-icon" icon={faBasketShopping} />
-          <h1 className="nav__logo-text">InterStore</h1>
+          <h1 className="nav__logo-text">
+            <Link to="/">InterStore</Link>
+          </h1>
         </div>
         <SearchForm />
         <button onClick={showMenu} className="nav__menu-show-button">

@@ -59,7 +59,10 @@ const Categories = ({ icon, showHideMenu }) => {
       <p className="categories-text" onClick={showCategories}>
         {icon ? icon : null}
         Categories
-        <BsFillCaretDownFill style={isShowed ? arrowStyles : null} />
+        <BsFillCaretDownFill
+          className="categories-text__arrow-icon"
+          style={isShowed ? arrowStyles : null}
+        />
       </p>
       <ul
         className={
