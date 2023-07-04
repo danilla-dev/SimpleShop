@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
   background-color: $products-section-background;
   z-index: 1;
   &__list {
@@ -37,9 +38,11 @@
     max-width: 500px;
   }
   .products-main-page {
-    width: 75%;
-    padding: 2em;
+    padding: 1em;
     padding-top: 0;
+    &__counter {
+      margin: auto 0;
+    }
   }
 }
 

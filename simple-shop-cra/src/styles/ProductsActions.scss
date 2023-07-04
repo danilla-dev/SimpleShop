@@ -9,8 +9,9 @@
   &-buttons {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 2em 0;
+    border-bottom: 1px solid silver;
     &__sort,
     &__display {
       display: flex;
@@ -20,9 +21,54 @@
       font-size: 2rem;
       cursor: pointer;
       right: 0;
+      button {
+        border: transparent;
+        background-color: transparent;
+        padding: 0.5em;
+        cursor: pointer;
+      }
       svg {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-left: 0.25em;
+      }
+    }
+    &__sort {
+      margin-left: 2em;
+    }
+    &__display {
+      margin-right: 2em;
+    }
+  }
+}
+@media (min-width: 414px) {
+  .products-actions {
+    &-buttons {
+      &__sort,
+      &__display {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .products-actions {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    &-buttons {
+      border: none;
+      &__sort,
+      &__display {
+        font-size: 2rem;
+        svg {
+          font-size: 2rem;
+        }
+      }
+      &__sort {
+        margin-left: 0;
+      }
+      &__display {
+        margin-right: 0;
       }
     }
   }

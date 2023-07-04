@@ -21,3 +21,28 @@ header {
   width: 100%;
   overflow: hidden;
 }
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left: auto; /* 1 */
+  max-width: 1400px;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .wrapper {
+    max-width: 992px;
+  }
+}
+@media (min-width: 1300px) {
+  .wrapper {
+    max-width: 1300px;
+  }
+}
+@media (min-width: 1300px) {
+  .wrapper {
+    max-width: 1300px;
+  }
+}

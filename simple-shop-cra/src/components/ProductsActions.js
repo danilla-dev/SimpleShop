@@ -19,20 +19,20 @@ const ProductsActions = (props) => {
     <FontAwesomeIcon icon={faList} />
   );
 
-  
   return (
     <div className="products-actions">
       <div className="products-actions-buttons">
         <div className="products-actions-buttons__sort">
           <p>Sort:</p>
-          <FontAwesomeIcon
-            onClick={sortFnc}
-            icon={sortFromLowest ? SortFromHighIcon : SortFromLowIcon}
-          />
+          <button onClick={sortFnc}>
+            <FontAwesomeIcon
+              icon={sortFromLowest ? SortFromHighIcon : SortFromLowIcon}
+            />
+          </button>
         </div>
         <div className="products-actions-buttons__display">
           <p>Display:</p>
-          {displayIcon}
+          <button>{displayIcon}</button>
         </div>
       </div>
 

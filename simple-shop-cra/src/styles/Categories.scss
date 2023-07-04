@@ -25,7 +25,7 @@
 }
 
 .main-page {
-  background-color: gray;
+  // background-color: gray;
 }
 .categories {
   &-list {
@@ -96,7 +96,8 @@
     display: flex;
     background-color: none;
     .categories {
-      width: 25%;
+      width: 250px;
+      background-color: purple;
       &-list {
         height: 250px;
         animation: none;
@@ -115,6 +116,14 @@
           display: none;
         }
       }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .main-page {
+    .categories {
+      width: 250px;
+      background-color: purple;
     }
   }
 }
