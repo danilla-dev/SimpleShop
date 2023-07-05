@@ -10,13 +10,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2em 0;
-    border-bottom: 1px solid silver;
     &__sort,
     &__display {
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 50%;
+      border: 1px solid rgba(128, 128, 128, 0.419);
       text-align: center;
       font-size: 2rem;
       cursor: pointer;
@@ -24,19 +24,13 @@
       button {
         border: transparent;
         background-color: transparent;
-        padding: 0.5em;
+        padding: 1em;
         cursor: pointer;
       }
       svg {
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-left: 0.25em;
       }
-    }
-    &__sort {
-      margin-left: 2em;
-    }
-    &__display {
-      margin-right: 2em;
     }
   }
 }
@@ -59,9 +53,9 @@
       border: none;
       &__sort,
       &__display {
-        font-size: 2rem;
+        border: none;
         svg {
-          font-size: 2rem;
+          font-size: 2.5rem;
         }
       }
       &__sort {

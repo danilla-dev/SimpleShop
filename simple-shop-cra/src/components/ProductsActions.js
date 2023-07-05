@@ -23,7 +23,7 @@ const ProductsActions = (props) => {
     <div className="products-actions">
       <div className="products-actions-buttons">
         <div className="products-actions-buttons__sort">
-          <p>Sort:</p>
+          {/* <p>Sort:</p> */}
           <button onClick={sortFnc}>
             <FontAwesomeIcon
               icon={sortFromLowest ? SortFromHighIcon : SortFromLowIcon}
@@ -31,7 +31,7 @@ const ProductsActions = (props) => {
           </button>
         </div>
         <div className="products-actions-buttons__display">
-          <p>Display:</p>
+          {/* <p>Display:</p> */}
           <button>{displayIcon}</button>
         </div>
       </div>
