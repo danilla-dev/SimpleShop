@@ -97,6 +97,9 @@
     background-color: none;
     .categories {
       width: 250px;
+      border-radius: 20px;
+      border: 3px solid rgba(3, 160, 96, 0.7);
+      margin-left: 1em;
       &-list {
         height: 250px;
         animation: none;
@@ -109,8 +112,7 @@
           }
         }
         &__category {
-          border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-          border-left: 2px solid rgba(0, 0, 0, 0.2);
+          border: none;
         }
       }
       &-text {
@@ -127,7 +129,7 @@
 @media (min-width: 992px) {
   .main-page {
     .categories {
-      width: 250px;
+      width: 300px;
     }
   }
 }

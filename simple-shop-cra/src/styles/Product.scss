@@ -8,12 +8,12 @@
 .main-product {
   position: relative;
   margin-bottom: 3em;
+  padding: 1em;
   border-radius: 10px;
   border: 2px solid $card-border;
   transition: box-shadow 0.2s, border 0.2s;
   overflow: hidden;
   cursor: pointer;
-  max-width: 600px;
   z-index: 1;
   &:hover {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
@@ -32,8 +32,9 @@
     z-index: -1;
   }
   &__img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    border-bottom: 1px solid #3c79505f;
   }
   &__name {
     text-align: center;
@@ -74,7 +75,7 @@
       color: $button-card-font;
       font-size: 2rem;
       font-weight: bold;
-      transition: 0.2s;
+      transition: background-color 0.2s, color 0.2s;
       cursor: pointer;
       &:hover {
         background: $button-card-hover;
@@ -104,16 +105,16 @@
     &__action-buttons {
       &-add,
       &-buy {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
       }
     }
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 557px) {
   .main-product {
     &__img {
-      width: 250px;
-      height: 250px;
+      width: 225px;
+      height: 225px;
     }
     &__action-buttons {
       &-add,
@@ -123,17 +124,11 @@
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 952px) {
   .main-product {
     &__img {
       width: 200px;
       height: 200px;
-    }
-    &__action-buttons {
-      &-add,
-      &-buy {
-        font-size: 2rem;
-      }
     }
   }
 }
