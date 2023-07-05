@@ -5,7 +5,6 @@ import { useMediaQuery } from "react-responsive";
 import { GiAlienFire } from "react-icons/gi";
 
 const Product = ({ filterProducts, listDisplay }) => {
-
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
 
   const productCName = listDisplay
@@ -41,7 +40,11 @@ const Product = ({ filterProducts, listDisplay }) => {
     );
   });
 
-  return <ul className={ulCname}>{allProducts}</ul>;
+  return (
+    <div className="products-main-page__container">
+      <ul className={ulCname}>{allProducts}</ul>;
+    </div>
+  );
 };
 
 export default Product;
