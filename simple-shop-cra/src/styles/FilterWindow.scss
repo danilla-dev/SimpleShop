@@ -1,3 +1,20 @@
+@keyframes show-filter-options {
+  from {
+    height: 0;
+  }
+  to {
+    height: 160px;
+  }
+}
+@keyframes hide-filter-options {
+  from {
+    height: 160px;
+  }
+  to {
+    height: 0;
+  }
+}
+
 .filter-window {
   display: flex;
   flex-direction: column;
@@ -5,9 +22,17 @@
   border-radius: 20px;
   border-top: 1px solid rgba(128, 128, 128, 0.419);
   // border: 3px solid rgba(3, 160, 97, 0.433);
+  &__title {
+    padding: 0.75em 0;
+  }
   p {
     text-align: center;
     font-size: 1.5rem;
-    margin: 0.25em 0;
+  }
+  &__filter-options {
+    animation: hide-filter-options 0.3s forwards;
+    &--active {
+      animation: show-filter-options 0.3s forwards;
+    }
   }
 }

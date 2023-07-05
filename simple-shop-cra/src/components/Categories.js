@@ -55,7 +55,7 @@ const Categories = ({ icon, showHideMenu }) => {
     <div className="categories">
       <p className="categories-text" onClick={showCategories}>
         {icon ? icon : null}
-        Categories: 
+        Categories:
         <BsFillCaretDownFill
           className="categories-text__arrow-icon"
           style={isShowed ? { transform: "rotate(180deg)" } : null}
