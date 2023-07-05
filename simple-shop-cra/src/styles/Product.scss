@@ -1,5 +1,10 @@
 @import "colors";
 
+// .main-page {
+//   display: flex;
+//   height: 100vh;
+//   border: 1px solid black;
+// }
 .main-product {
   position: relative;
   margin-bottom: 3em;
@@ -8,6 +13,7 @@
   transition: box-shadow 0.2s, border 0.2s;
   overflow: hidden;
   cursor: pointer;
+  max-width: 600px;
   z-index: 1;
   &:hover {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
@@ -120,8 +126,8 @@
 @media (min-width: 992px) {
   .main-product {
     &__img {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
     }
     &__action-buttons {
       &-add,
