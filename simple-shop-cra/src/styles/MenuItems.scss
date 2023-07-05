@@ -12,10 +12,15 @@
       padding: 0;
     }
     &-list {
+      flex-direction: column;
       background-color: black;
+      animation: show-categories 0.3s forwards;
       &__category {
         width: 70%;
         border-bottom: 2px solid rgba(192, 192, 192, 0.2);
+      }
+      &--hide {
+        animation: hide-categories 0.3s forwards;
       }
     }
   }

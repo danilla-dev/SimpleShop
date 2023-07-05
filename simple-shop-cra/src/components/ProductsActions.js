@@ -19,23 +19,22 @@ const ProductsActions = (props) => {
     <FontAwesomeIcon icon={faList} />
   );
 
+  const sortIcon = sortFromLowest ? (
+    <FontAwesomeIcon icon={SortFromHighIcon} />
+  ) : (
+    <FontAwesomeIcon icon={SortFromLowIcon} />
+  );
+
   return (
     <div className="products-actions">
       <div className="products-actions-buttons">
         <div className="products-actions-buttons__sort">
-          {/* <p>Sort:</p> */}
-          <button onClick={sortFnc}>
-            <FontAwesomeIcon
-              icon={sortFromLowest ? SortFromHighIcon : SortFromLowIcon}
-            />
-          </button>
+          <button onClick={sortFnc}>{sortIcon}</button>
         </div>
         <div className="products-actions-buttons__display">
-          {/* <p>Display:</p> */}
           <button>{displayIcon}</button>
         </div>
       </div>
-
       <p className="products-main-page__counter">
         We found<span>{products.length}</span>
         {products.length > 1 ? " products" : " product"} for you.

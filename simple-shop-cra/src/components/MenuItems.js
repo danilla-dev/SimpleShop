@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBoxOpen, faCartShopping, faRightToBracket, faUserPlus, faTag } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
-import Categories from '../layouts/Categories'
+import Categories from './Categories'
 
 import '../styles/MenuItems.scss'
 let menuItems = [

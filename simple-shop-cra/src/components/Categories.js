@@ -51,24 +51,19 @@ const Categories = ({ icon, showHideMenu }) => {
     );
   });
 
-  const arrowStyles = {
-    transform: "rotate(180deg)",
-  };
   return (
     <div className="categories">
       <p className="categories-text" onClick={showCategories}>
         {icon ? icon : null}
-        Categories
+        Categories: 
         <BsFillCaretDownFill
           className="categories-text__arrow-icon"
-          style={isShowed ? arrowStyles : null}
+          style={isShowed ? { transform: "rotate(180deg)" } : null}
         />
       </p>
       <ul
         className={
-          !isShowed
-            ? `categories-list categories-list--hide`
-            : "categories-list"
+          isShowed ? "categories-list" : `categories-list categories-list--hide`
         }
       >
         {allCategories}
