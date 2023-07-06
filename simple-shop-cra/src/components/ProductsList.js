@@ -1,130 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext } from "react";
 
 import Product from "./Product";
+// import ProductsContext from "../Contexts/ProductsContext";
 import ProductsActions from "./ProductsActions";
+import { ProductsContext } from "../Contexts/ProductsContext";
 
 import "../styles/Product.scss";
 
-// produkty z bazy danych
-const products = [
-  {
-    title: "Ray gun",
-    category: "Guns",
-    price: 200,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Ray gun",
-    category: "Guns",
-    price: 220,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Ray gun",
-    category: "Guns",
-    price: 300,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Ray gun",
-    category: "Guns",
-    price: 270,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Plumbus",
-    category: "Other",
-    price: 20,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/plumbus-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/plumbus-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Portal-gun",
-    category: "Special",
-    price: 200,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Portal-gun",
-    category: "Special",
-    price: 200,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Portal-gun",
-    category: "Special",
-    price: 200,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Portal-gun",
-    category: "Special",
-    price: 200,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-lg.jpg",
-    path: "",
-  },
-  {
-    title: "Portal-gun",
-    category: "Special",
-    price: 320,
-    imageMobile:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
-    imageDesk:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-lg.jpg",
-    path: "",
-  },
-];
-products.sort((a, b) => a.price - b.price).reverse();
-const ProductsList = (props) => {
+const ProductsList = () => {
   const [listDisplay, setListDisplay] = useState(false);
   const [sortFromLowest, setSortFromLowest] = useState(false);
+  const { filterProducts } = useContext(ProductsContext);
 
-  const searchCategory = props.match.params.id;
-  let filterProducts;
-
-  if (searchCategory) {
-    filterProducts = products.filter(
-      (product) => product.category === searchCategory
-    );
-  } else {
-    filterProducts = products;
-  }
   const sortProducts = () => {
-    products.reverse();
+    filterProducts.reverse();
     setSortFromLowest(!sortFromLowest);
   };
   const setDisplayOfProducts = () => {
@@ -140,7 +29,7 @@ const ProductsList = (props) => {
         sortFnc={sortProducts}
         sortFromLowest={sortFromLowest} //state
       />
-      <Product listDisplay={listDisplay} filterProducts={filterProducts} />
+      <Product listDisplay={listDisplay}  />
     </>
   );
 };

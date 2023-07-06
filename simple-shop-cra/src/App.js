@@ -9,9 +9,7 @@ import {
 } from "react-router-dom";
 import Header from "./layouts/Header";
 import MainPage from "./layouts/MainPage";
-import AccountPanel from "./layouts/AccountPanel";
 import Footer from "./layouts/Footer";
-
 
 class App extends Component {
   render() {
@@ -21,11 +19,6 @@ class App extends Component {
           <header>{<Header />}</header>
           <main>
             <section id="main-page">{<MainPage />}</section>
-            <aside>
-              <Switch>
-                <Route path="*" component={AccountPanel}></Route>
-              </Switch>
-            </aside>
           </main>
           <footer>{<Footer />}</footer>
         </div>

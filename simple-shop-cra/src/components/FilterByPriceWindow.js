@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+import { ProductsContext } from "../Contexts/ProductsContext";
+
 import "../styles/FilterByPriceWindow.scss";
 
 const FilterByPriceWindow = () => {
+  const { filterByPrice } = useContext(ProductsContext);
   const [range, setRange] = useState(0);
+
   const handleRange = (e) => {
+    filterByPrice(e.target.value);
     setRange(e.target.value);
   };
   return (

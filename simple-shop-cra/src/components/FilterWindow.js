@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import Categories from "./Categories";
 import FilterByPriceWindow from "./FilterByPriceWindow";
 
 import "../styles/FilterWindow.scss";
-import { faL } from "@fortawesome/free-solid-svg-icons";
 
 const FilterWindow = () => {
   const [isShowed, setIsShowed] = useState(false);
-
+ 
   const filterOptionsCname = isShowed
     ? "filter-window__filter-options filter-window__filter-options--active"
     : "filter-window__filter-options";
