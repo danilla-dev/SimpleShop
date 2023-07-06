@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { BsFillCaretDownFill } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 import "../styles/Categories.scss";
@@ -40,13 +39,15 @@ const Categories = ({ icon, showHideMenu }) => {
   const allCategories = categories.map((category, index) => {
     return (
       <li className={`categories-list__category`} key={index}>
-        <Link
+        <NavLink
           to={category.path}
-          className={category.cName}
+          className={category.cName + " " + "categories-list__category-link"}
           onClick={showHideMenu && scrollToProducts}
+          exact
+          activeClassName="categories-list__category-link--active"
         >
           {category.title}
-        </Link>
+        </NavLink>
       </li>
     );
   });
@@ -55,11 +56,7 @@ const Categories = ({ icon, showHideMenu }) => {
     <div className="categories">
       <p className="categories-text" onClick={showCategories}>
         {icon ? icon : null}
-        Categories:
-        <BsFillCaretDownFill
-          className="categories-text__arrow-icon"
-          style={isShowed ? { transform: "rotate(180deg)" } : null}
-        />
+        Categories
       </p>
       <ul
         className={

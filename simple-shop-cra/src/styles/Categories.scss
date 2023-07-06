@@ -39,10 +39,14 @@
       padding: 1em;
       width: 25%;
       text-align: center;
-      a {
+      &-link {
         font-size: 1.5rem;
         color: black;
+        margin-left: 1em;
         text-decoration: none;
+        &--active {
+          color: #0fb70f;
+        }
       }
     }
   }
@@ -94,21 +98,23 @@
         height: 250px;
         animation: none;
         background-color: transparent;
-        li {
-          text-align: left;
-          a {
-            color: black;
-            margin-left: 1em;
-          }
-        }
         &__category {
           border: none;
+          text-align: left;
+          &-link {
+            color: black;
+            margin-left: 1em;
+            &--active {
+              color: #0fb70f;
+            }
+          }
         }
       }
       &-text {
         display: block;
         text-align: left;
         margin-left: 0.25em;
+        cursor: unset;
         svg {
           display: none;
         }

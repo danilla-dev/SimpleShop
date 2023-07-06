@@ -6,7 +6,7 @@ import FilterByPriceWindow from "./FilterByPriceWindow";
 import "../styles/FilterWindow.scss";
 import { faL } from "@fortawesome/free-solid-svg-icons";
 
-const SortWindow = () => {
+const FilterWindow = () => {
   const [isShowed, setIsShowed] = useState(false);
 
   const filterOptionsCname = isShowed
@@ -28,4 +28,4 @@ const SortWindow = () => {
   );
 };
 
-export default SortWindow;
+export default FilterWindow;
