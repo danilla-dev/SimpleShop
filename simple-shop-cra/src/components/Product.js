@@ -11,9 +11,8 @@ const Product = ({ listDisplay }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const { filterProducts, productsByPrice } = useContext(ProductsContext);
 
-
-/// problem polega na tym ze gdy zmieniam kategorie kiedy jest wybrana jakas cena musze ponownie poruszyc suwakiem abyh to sie odwierzylo i wyswietlilo poprawne produkty a nie te wczesniejsze 
-// Najlepiej jak zmienie ten suwak na po prostu pole do wpisania min i max ceny
+  /// problem polega na tym ze gdy zmieniam kategorie kiedy jest wybrana jakas cena musze ponownie poruszyc suwakiem abyh to sie odwierzylo i wyswietlilo poprawne produkty a nie te wczesniejsze
+  // Najlepiej jak zmienie ten suwak na po prostu pole do wpisania min i max ceny
 
   // const targetProducts = filterByPrice ? filterByPrice : filterProducts;
 

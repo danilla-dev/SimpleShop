@@ -128,18 +128,9 @@ const MainPage = () => {
   const searchCategory = location.pathname.split("/").pop();
   const filterProducts = handleFilterProducts(searchCategory);
 
-  const [productsByPrice, setProductsByPrice] = useState();
-
   const productsContextValue = {
     products,
     filterProducts,
-    filterByPrice: (filterPrice) => {
-      const productByPrice = filterProducts.filter(
-        (product) => product.price <= filterPrice
-      );
-      setProductsByPrice(productByPrice);
-    },
-    productsByPrice,
   };
   return (
     <div className="main-page wrapper">

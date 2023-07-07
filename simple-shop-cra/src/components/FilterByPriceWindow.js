@@ -6,28 +6,49 @@ import "../styles/FilterByPriceWindow.scss";
 
 const FilterByPriceWindow = () => {
   const { filterByPrice } = useContext(ProductsContext);
-  const [range, setRange] = useState(0);
+  const [minPrice, setMinPrice] = useState("1");
+  const [maxPrice, setMaxPrice] = useState("");
+  const [priceRange, setPriceRange] = useState({ min: 1, max: 2 });
 
-  const handleRange = (e) => {
-    filterByPrice(e.target.value);
-    setRange(e.target.value);
+  const handleValueChange = ({ target, keyCode }) => {
+    const value = target.value.split(" ").join("");
+
+    if (value >= 0) {
+      if (target.name === "min") {
+        setMinPrice(value);
+        if (keyCode === 8 && minPrice.length === 1) {
+          setMinPrice("");
+        }
+      }
+      if (target.name === "max") {
+        setMaxPrice(value);
+        if (keyCode === 8 && maxPrice.length === 1) {
+          setMaxPrice("");
+        }
+      }
+    }
   };
+
   return (
     <div className="sort-price">
       <p>Sort by max price: </p>
       <form>
         <input
-          onChange={handleRange}
-          value={range}
-          type="range"
-          min="10"
-          max="500"
+          className="sort-price_min-value"
+          name="min"
+          type="text"
+          onChange={handleValueChange}
+          onKeyDown={handleValueChange}
+          value={minPrice}
         />
-        <div className="range-info">
-          <span className="range-info__min info">10</span>
-          <span className="range-info__actual info">{range}</span>
-          <span className="range-info__max info">500</span>
-        </div>
+        <input
+          className="sort-price_max-value"
+          name="max"
+          type="text"
+          onChange={handleValueChange}
+          onKeyDown={handleValueChange}
+          value={maxPrice}
+        />
       </form>
     </div>
   );
