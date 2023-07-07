@@ -23,6 +23,14 @@
     // opacity: 0;
   }
 }
+@keyframes underline-categories {
+  from {
+    width: 0;
+  }
+  to {
+    width: 150%;
+  }
+}
 
 // .main-page {
 //   // background-color: gray;
@@ -42,10 +50,22 @@
       &-link {
         font-size: 1.5rem;
         color: black;
-        margin-left: 1em;
         text-decoration: none;
         &--active {
-          color: #0fb70f;
+          position: relative;
+          // color: #0fb70f;
+          // font-weight: bold;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            left: 50%;
+            width: 150%;
+            height: 3px;
+            transform: translate(-50%, -50%);
+            background-color: #0fb70f;
+            animation: underline-categories 0.3s forwards;
+          }
         }
       }
     }
@@ -57,7 +77,6 @@
     font-size: 2rem;
     text-align: center;
     padding: 0.5em;
-    cursor: pointer;
     &__arrow-icon {
       display: none;
     }

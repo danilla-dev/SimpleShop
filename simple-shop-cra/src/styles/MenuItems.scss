@@ -8,6 +8,7 @@
     position: relative;
     color: white;
     border: none;
+    cursor: pointer;
     &-text {
       font-size: 3rem;
       padding: 0;
@@ -19,6 +20,13 @@
       &__category {
         width: 70%;
         border-bottom: 2px solid rgba(192, 192, 192, 0.2);
+        &-link {
+          &--active {
+            &::after {
+              display: none;
+            }
+          }
+        }
       }
       &--hide {
         animation: hide-categories 0.3s forwards;

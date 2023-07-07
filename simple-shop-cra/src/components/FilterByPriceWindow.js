@@ -43,35 +43,54 @@ const FilterByPriceWindow = () => {
       setIsCorrectRange(true);
     }
   };
-
+  const errorVisibleStyle = isCorrectRange
+    ? { visibility: "hidden" }
+    : { visibility: "visible" };
+  const errorMaxInputStyle = isCorrectRange
+    ? null
+    : { border: "2px solid tomato", borderRadius: 5 };
   return (
     <div className="sort-price">
-      <p>Sort by price: </p>
-      <form>
-        <label htmlFor="min">
-          Min:
-          <input
-            className="sort-price_min-value"
-            name="min"
-            type="text"
-            onChange={handleValueChange}
-            onKeyDown={handleValueChange}
-            value={minPrice}
-          />
-        </label>
-        <label htmlFor="max">
-          Max:
-          <input
-            className="sort-price_max-value"
-            name="max"
-            type="text"
-            onChange={handleValueChange}
-            onKeyDown={handleValueChange}
-            value={maxPrice}
-          />
-          {!isCorrectRange && <p>Incorrect value of price</p>}
-        </label>
-        <button onClick={handleSetPrice}>Set price</button>
+      <p className="sort-price__title">Sort by price: </p>
+      <form onSubmit={handleSetPrice} className="sort-price-form">
+        <div className="sort-price-form__inputs">
+          <div className="sort-price-form__inputs-min">
+            <label className="sort-price-form__inputs-min-label" htmlFor="min">
+              Min:
+            </label>
+
+            <input
+              className="sort-price-form__inputs-min-input"
+              name="min"
+              type="text"
+              onChange={handleValueChange}
+              onKeyDown={handleValueChange}
+              value={minPrice}
+              placeholder="Min"
+            />
+          </div>
+          <div className="sort-price-form__inputs-max">
+            <label className="sort-price-form__inputs-max-label" htmlFor="max">
+              Max:
+            </label>
+            <input
+              className="sort-price-form__inputs-min-input"
+              name="max"
+              type="text"
+              onChange={handleValueChange}
+              onKeyDown={handleValueChange}
+              value={maxPrice}
+              placeholder="Max"
+              style={errorMaxInputStyle}
+            />
+          </div>
+        </div>
+
+        <p style={errorVisibleStyle} className="sort-price-form__error">
+          Incorrect value of price
+        </p>
+
+        <button className="sort-price-form__button">Set price</button>
       </form>
     </div>
   );

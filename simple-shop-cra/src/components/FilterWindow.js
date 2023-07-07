@@ -7,13 +7,14 @@ import "../styles/FilterWindow.scss";
 
 const FilterWindow = () => {
   const [isShowed, setIsShowed] = useState(false);
- 
+
   const filterOptionsCname = isShowed
     ? "filter-window__filter-options filter-window__filter-options--active"
     : "filter-window__filter-options";
   const handleShow = () => {
     setIsShowed(!isShowed);
   };
+
   return (
     <div className="filter-window">
       <p onClick={handleShow} className="filter-window__title">

@@ -67,7 +67,6 @@
     padding: 1em;
     &-add {
       padding: 0.5em 1em;
-      transform: scale(1.05);
       border: transparent;
       border-radius: 10px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -80,8 +79,6 @@
       &:hover {
         background: $button-card-hover;
         color: $button-card-font-hover;
-        backdrop-filter: blur(1.6px);
-        -webkit-backdrop-filter: blur(1.6px);
       }
     }
     .cart-icon {

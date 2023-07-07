@@ -3,12 +3,12 @@
     height: 0;
   }
   to {
-    height: 160px;
+    height: 230px;
   }
 }
 @keyframes hide-filter-options {
   from {
-    height: 160px;
+    height: 230px;
   }
   to {
     height: 0;
@@ -24,12 +24,15 @@
   // border: 3px solid rgba(3, 160, 97, 0.433);
   &__title {
     padding: 0.75em 0;
+    cursor: pointer;
   }
   p {
     text-align: center;
     font-size: 1.5rem;
   }
   &__filter-options {
+    height: 0;
+    overflow: hidden;
     animation: hide-filter-options 0.3s forwards;
     &--active {
       animation: show-filter-options 0.3s forwards;
