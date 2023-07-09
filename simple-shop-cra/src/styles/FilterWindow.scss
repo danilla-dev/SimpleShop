@@ -1,41 +1,32 @@
-@keyframes show-filter-options {
-  from {
-    height: 0;
-  }
-  to {
-    height: 230px;
-  }
-}
-@keyframes hide-filter-options {
-  from {
-    height: 230px;
-  }
-  to {
-    height: 0;
-  }
-}
-
 .filter-window {
   display: flex;
   flex-direction: column;
   width: 100%;
   border-radius: 20px;
   border-top: 1px solid rgba(128, 128, 128, 0.419);
-  // border: 3px solid rgba(3, 160, 97, 0.433);
   &__title {
     padding: 0.75em 0;
-    cursor: pointer;
-  }
-  p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
   }
   &__filter-options {
     height: 0;
-    overflow: hidden;
-    animation: hide-filter-options 0.3s forwards;
+    transition: height 0.3s;
     &--active {
-      animation: show-filter-options 0.3s forwards;
+      height: 230px;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .filter-window {
+    &__title {
+      font-size: 2rem;
+    }
+    &__filter-options {
+      &--active {
+        height: 250px;
+      }
     }
   }
 }
@@ -45,5 +36,8 @@
     max-width: 250px;
     border: 3px solid rgba(3, 160, 97, 0.433);
     margin-left: 1em;
+    &__title {
+      cursor: unset;
+    }
   }
 }
