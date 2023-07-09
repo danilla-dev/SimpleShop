@@ -2,7 +2,6 @@
   "name": "simple-shop-cra",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://danilla-dev.github.io/SimpleShop/simple-shop-cra/build",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",

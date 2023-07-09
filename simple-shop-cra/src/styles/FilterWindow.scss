@@ -8,13 +8,27 @@
     padding: 0.75em 0;
     text-align: center;
     font-size: 1.6rem;
+    font-weight: bold;
     cursor: pointer;
   }
   &__filter-options {
     height: 0;
     transition: height 0.3s;
     &--active {
-      height: 230px;
+      height: 250px;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .filter-window {
+    &__title {
+      font-size: 1.8rem;
+    }
+    &__filter-options {
+      &--active {
+        height: 270px;
+      }
     }
   }
 }
@@ -25,7 +39,7 @@
     }
     &__filter-options {
       &--active {
-        height: 250px;
+        height: 290px;
       }
     }
   }

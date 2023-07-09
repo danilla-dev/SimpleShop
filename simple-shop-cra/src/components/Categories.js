@@ -8,8 +8,8 @@ import "../styles/Categories.scss";
 const categories = [
   { title: "All", cName: "all-category", path: "/products/" },
   { title: "Guns", cName: "guns-category", path: "/products/Guns" },
-  { title: "Other", cName: "other-category", path: "/products/Other" },
   { title: "Special", cName: "special-category", path: "/products/Special" },
+  { title: "Other", cName: "other-category", path: "/products/Other" },
 ];
 
 const Categories = ({ icon, showHideMenu }) => {

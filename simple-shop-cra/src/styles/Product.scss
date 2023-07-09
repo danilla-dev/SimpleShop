@@ -107,6 +107,14 @@
     }
   }
 }
+@media (min-width: 375px) {
+  .main-product {
+    &__img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
 @media (min-width: 557px) {
   .main-product {
     &__img {

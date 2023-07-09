@@ -28,7 +28,7 @@
     width: 0;
   }
   to {
-    width: 70%;
+    width: 120%;
   }
 }
 
@@ -41,11 +41,11 @@
   &-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-bottom: 0.5em;
     list-style: none;
     &__category {
       padding: 1em;
-      width: 25%;
       text-align: center;
       &-link {
         display: block;
@@ -74,6 +74,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
+    font-weight: 500;
     text-align: center;
     padding: 0.5em;
     &__arrow-icon {
@@ -82,6 +83,22 @@
   }
 }
 
+@media (min-width: 375px) {
+  .main-page {
+    .categories {
+      &-text {
+        font-size: 1.7rem;
+      }
+      &-list {
+        &__category {
+          &-link {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
 @media (min-width: 576px) {
   .main-page {
     .categories {
