@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.d5064601.css",
-    "main.js": "/static/js/main.1ef65807.js",
-    "static/media/header-desktop.png": "/static/media/header-desktop.e670ecfb72d75166691a.png",
-    "static/media/header-mobile.png": "/static/media/header-mobile.9e433fe7fec5cead4d19.png",
-    "index.html": "/index.html",
-    "main.d5064601.css.map": "/static/css/main.d5064601.css.map",
-    "main.1ef65807.js.map": "/static/js/main.1ef65807.js.map"
+    "main.css": "/SimpleShop/static/css/main.d5064601.css",
+    "main.js": "/SimpleShop/static/js/main.e1791683.js",
+    "static/media/header-desktop.png": "/SimpleShop/static/media/header-desktop.e670ecfb72d75166691a.png",
+    "static/media/header-mobile.png": "/SimpleShop/static/media/header-mobile.9e433fe7fec5cead4d19.png",
+    "index.html": "/SimpleShop/index.html",
+    "main.d5064601.css.map": "/SimpleShop/static/css/main.d5064601.css.map",
+    "main.e1791683.js.map": "/SimpleShop/static/js/main.e1791683.js.map"
   },
   "entrypoints": [
     "static/css/main.d5064601.css",
-    "static/js/main.1ef65807.js"
+    "static/js/main.e1791683.js"
   ]
 }
