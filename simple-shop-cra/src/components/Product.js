@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { ProductsContext } from "../Contexts/ProductsContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "react-responsive";
 import { GiAlienFire } from "react-icons/gi";
 
@@ -41,8 +41,8 @@ const Product = ({ listDisplay }) => {
             </div>
             <div className="main-product__action-buttons">
               <button className="main-product__action-buttons-add">
-                Add to cart
-                <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
+                {listDisplay ? "Add " : "Add to cart"}
+                <FontAwesomeIcon className="cart-icon" icon={faCartPlus} />
               </button>
             </div>
           </div>

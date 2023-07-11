@@ -55,7 +55,7 @@ const products = [
     path: "",
   },
   {
-    title: "Portal-gun",
+    title: "Portal gun",
     category: "Special",
     price: 200,
     imageMobile:
@@ -65,7 +65,7 @@ const products = [
     path: "",
   },
   {
-    title: "Portal-gun",
+    title: "Portal gun",
     category: "Special",
     price: 200,
     imageMobile:
@@ -75,7 +75,7 @@ const products = [
     path: "",
   },
   {
-    title: "Portal-gun",
+    title: "Portal gun",
     category: "Special",
     price: 200,
     imageMobile:
@@ -85,7 +85,7 @@ const products = [
     path: "",
   },
   {
-    title: "Portal-gun",
+    title: "Portal gun",
     category: "Special",
     price: 200,
     imageMobile:
@@ -95,7 +95,7 @@ const products = [
     path: "",
   },
   {
-    title: "Portal-gun",
+    title: "Portal gun",
     category: "Special",
     price: 320,
     imageMobile:

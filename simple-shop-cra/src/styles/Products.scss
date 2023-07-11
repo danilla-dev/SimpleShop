@@ -16,7 +16,7 @@
   }
   &__counter {
     margin: 1em 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: center;
     span {
       margin-left: 0.3em;
@@ -27,12 +27,23 @@
     flex-wrap: wrap;
     margin: 0 auto;
     &--list-display {
-      padding: 1em;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5em;
       width: 100%;
     }
   }
 }
 
+@media (min-width: 375px) {
+  .products-main-page {
+    &__container {
+      &--list-display {
+        padding: 1em;
+      }
+    }
+  }
+}
 @media (min-width: 557px) {
   .products-main-page__list {
     display: grid;
