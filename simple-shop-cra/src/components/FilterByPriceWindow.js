@@ -5,11 +5,13 @@ import { ProductsContext } from "../Contexts/ProductsContext";
 import "../styles/FilterByPriceWindow.scss";
 
 const FilterByPriceWindow = () => {
-  const { filterByPrice } = useContext(ProductsContext);
+  const { handleProductsRange } = useContext(ProductsContext);
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
-  const [priceRange, setPriceRange] = useState({ min: 1, max: 2 });
+  const [priceRange, setPriceRange] = useState();
   const [isCorrectRange, setIsCorrectRange] = useState(true);
+
+  priceRange && handleProductsRange(priceRange);
 
   const handleValueChange = ({ target, keyCode }) => {
     const value = target.value.replace(/\s/g, "");
@@ -32,8 +34,7 @@ const FilterByPriceWindow = () => {
     e.preventDefault();
     const min = parseInt(minPrice);
     const max = parseInt(maxPrice);
-    if (min > max) {
-      console.log("zla wartosc od do ");
+    if (min > max || !(min && max)) {
       setIsCorrectRange(false);
     } else {
       setPriceRange({

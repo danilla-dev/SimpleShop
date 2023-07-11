@@ -51,7 +51,7 @@ const Product = ({ listDisplay }) => {
 
   return (
     <div className="products-main-page__container">
-      <ul className={ulCname}>{allProducts}</ul>;
+      <ul className={ulCname}>{allProducts}</ul>
     </div>
   );
 };

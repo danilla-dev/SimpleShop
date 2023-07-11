@@ -52,7 +52,9 @@
     max-width: 250px;
     min-height: 550px;
     border: 3px solid rgba(3, 160, 97, 0.433);
+    box-shadow: 0 0px 10px 1px rgba(3, 89, 55, 0.233);
     margin-left: 1em;
+    margin-bottom: 1em;
     &__title {
       cursor: unset;
     }
