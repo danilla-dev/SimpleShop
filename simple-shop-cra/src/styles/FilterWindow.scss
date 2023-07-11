@@ -26,8 +26,10 @@
       font-size: 1.8rem;
     }
     &__filter-options {
+      height: 0;
+      transition: height 0.3s;
       &--active {
-        height: 270px;
+        height: 250px;
       }
     }
   }
@@ -39,7 +41,7 @@
     }
     &__filter-options {
       &--active {
-        height: 290px;
+        height: 250px;
       }
     }
   }
@@ -48,6 +50,7 @@
   .filter-window {
     min-width: 180px;
     max-width: 250px;
+    min-height: 550px;
     border: 3px solid rgba(3, 160, 97, 0.433);
     margin-left: 1em;
     &__title {

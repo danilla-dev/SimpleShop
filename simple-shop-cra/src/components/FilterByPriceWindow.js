@@ -51,7 +51,7 @@ const FilterByPriceWindow = () => {
     : { border: "2px solid tomato", borderRadius: 5 };
   return (
     <div className="sort-price">
-      <p className="sort-price__title">Sort by price: </p>
+      <p className="sort-price__title">Filter by price: </p>
       <form onSubmit={handleSetPrice} className="sort-price-form">
         <div className="sort-price-form__inputs">
           <div className="sort-price-form__inputs-min">
@@ -86,11 +86,10 @@ const FilterByPriceWindow = () => {
           </div>
         </div>
 
+        <button className="sort-price-form__button">Set price</button>
         <p style={errorVisibleStyle} className="sort-price-form__error">
           Incorrect value of price
         </p>
-
-        <button className="sort-price-form__button">Set price</button>
       </form>
     </div>
   );

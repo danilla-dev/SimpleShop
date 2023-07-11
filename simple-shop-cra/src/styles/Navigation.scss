@@ -30,8 +30,6 @@
   }
 }
 
-
-
 .nav {
   position: fixed;
   top: 0;
@@ -105,19 +103,10 @@
 }
 @media (min-width: 768px) {
   .nav {
+    overflow: visible;
     &__logo {
       margin-left: 20px;
     }
-    &__menu {
-      &-show-button {
-        margin-right: 20px;
-      }
-    }
-  }
-}
-@media (min-width: 620px) {
-  .nav {
-    overflow: visible;
     &__menu {
       position: absolute;
       top: 0;
@@ -129,7 +118,9 @@
       flex-direction: row;
       transform: translateX(0);
       transition: transform 0s;
-
+      &-show-button {
+        margin-right: 20px;
+      }
       &-show-icon {
         display: none;
       }

@@ -64,7 +64,7 @@
   }
 }
 
-@media (min-width: 620px) {
+@media (min-width: 768px) {
   .menu-list {
     position: relative;
     flex-direction: row;
@@ -98,7 +98,7 @@
     }
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 768px) {
   .menu-list {
     .categories {
       &-text {

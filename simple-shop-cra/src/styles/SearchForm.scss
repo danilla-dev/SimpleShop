@@ -67,4 +67,21 @@
     left: unset;
     z-index: 100;
   }
+  .input-container {
+    width: 70%;
+    &__input {
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .search-form {
+    right: 280px;
+  }
+  .input-container {
+    width: 90%;
+    &__input {
+      width: 100%;
+    }
+  }
 }
