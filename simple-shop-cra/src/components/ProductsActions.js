@@ -32,7 +32,7 @@ const ProductsActions = (props) => {
           <button onClick={sortFnc}>{sortIcon}</button>
         </div>
         <div className="products-actions-buttons__display">
-          <button>{displayIcon}</button>
+          <button onClick={displayFnc}>{displayIcon}</button>
         </div>
       </div>
       <p className="products-main-page__counter">

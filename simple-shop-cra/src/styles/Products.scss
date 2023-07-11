@@ -10,6 +10,9 @@
   z-index: 1;
   &__list {
     list-style: none;
+    &--list-display {
+      max-width: 100%;
+    }
   }
   &__counter {
     margin: 1em 0;
@@ -23,6 +26,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    &--list-display {
+      padding: 1em;
+      width: 100%;
+    }
   }
 }
 

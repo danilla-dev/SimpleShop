@@ -1,10 +1,5 @@
 @import "colors";
 
-// .main-page {
-//   display: flex;
-//   height: 100vh;
-//   border: 1px solid black;
-// }
 .main-product {
   position: relative;
   margin-bottom: 3em;
@@ -83,6 +78,28 @@
     }
     .cart-icon {
       margin-left: 0.5em;
+    }
+  }
+  &--list-display {
+    display: flex;
+    max-width: 100%;
+    .main-product__price {
+      padding: 0.25em 0;
+    }
+    img {
+      height: 150px;
+      width: 150px;
+      border: none;
+    }
+    h3 {
+      font-size: 1.6rem;
+    }
+    button {
+      font-size: 1.4rem;
+    }
+    p {
+      margin: 0.5em 0;
+      font-size: 1.4rem;
     }
   }
 }

@@ -17,7 +17,7 @@ const ProductsList = () => {
     setSortFromLowest(!sortFromLowest);
   };
   const setDisplayOfProducts = () => {
-    console.log("display");
+    setListDisplay(!listDisplay);
   };
 
   return (
@@ -29,7 +29,7 @@ const ProductsList = () => {
         sortFnc={sortProducts}
         sortFromLowest={sortFromLowest} //state
       />
-      <Product listDisplay={listDisplay}  />
+      <Product listDisplay={listDisplay} />
     </>
   );
 };
