@@ -82,6 +82,7 @@
   }
   &--list-display {
     display: flex;
+    justify-content: space-between;
     max-width: 100%;
     .main-product__price {
       padding: 0.25em 0;
@@ -109,9 +110,9 @@
     .product-info {
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: space-evenly;
-      margin: 0 auto;
+      padding: 0 0.5em;
+      width: 45%;
     }
   }
 }
