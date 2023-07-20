@@ -35,8 +35,8 @@ const FilterByPriceWindow = () => {
 
     const min = minPrice == "" ? 0 : parseInt(minPrice);
 
-    const max = maxPrice === "" ? 999999999 : parseInt(maxPrice);
-    if (min > max || !max) {
+    const max = maxPrice === "" ? Infinity : parseInt(maxPrice);
+    if (min > max) {
       setIsCorrectRange(false);
     } else {
       setPriceRange({
