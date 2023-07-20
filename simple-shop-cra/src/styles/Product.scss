@@ -83,7 +83,8 @@
   &--list-display {
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
+    // max-width: 100%;
+    margin-bottom: 1em;
     .main-product__price {
       padding: 0.25em 0;
       margin: 0;
@@ -203,6 +204,13 @@
       &-buy {
         font-size: 1.6rem;
       }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .main-product {
+    &--list-display {
+      max-width: unset;
     }
   }
 }
