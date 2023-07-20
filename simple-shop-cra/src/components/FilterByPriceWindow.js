@@ -32,9 +32,11 @@ const FilterByPriceWindow = () => {
   };
   const handleSetPrice = (e) => {
     e.preventDefault();
-    const min = parseInt(minPrice);
-    const max = parseInt(maxPrice);
-    if (min > max || !(min && max)) {
+
+    const min = minPrice == "" ? 0 : parseInt(minPrice);
+
+    const max = maxPrice === "" ? 999999999 : parseInt(maxPrice);
+    if (min > max || !max) {
       setIsCorrectRange(false);
     } else {
       setPriceRange({
