@@ -238,6 +238,10 @@
     &__description {
       display: block;
       font-size: 1.4rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; 
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     &--list-display {
       .product-info {
