@@ -9,7 +9,7 @@ import { GiAlienFire } from "react-icons/gi";
 
 const Product = ({ listDisplay }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const { filterProducts, productsByPrice } = useContext(ProductsContext);
+  const { filterProducts } = useContext(ProductsContext);
 
   const productCName = listDisplay
     ? "main-product main-product--list-display"
@@ -35,6 +35,9 @@ const Product = ({ listDisplay }) => {
           <div className="product-info">
             <h3 className="main-product__name">{product.title}</h3>
             <p className="main-product__category">{product.category}</p>
+            {listDisplay && (
+              <p className="main-product__description">{product.description}</p>
+            )}
             <div className="main-product__price">
               <span>{product.price}</span>
               <GiAlienFire />

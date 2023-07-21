@@ -80,6 +80,9 @@
       margin-left: 0.5em;
     }
   }
+  &__description {
+    display: none;
+  }
   &--list-display {
     display: flex;
     justify-content: space-between;
@@ -100,7 +103,7 @@
     button {
       font-size: 1.6rem;
     }
-    p {
+    .main-product__category {
       font-size: 1.4rem;
     }
 
@@ -159,7 +162,7 @@
       button {
         font-size: 1.6rem;
       }
-      p {
+      .main-product__category {
         font-size: 1.8rem;
       }
 
@@ -227,6 +230,27 @@
     &__img {
       width: 200px;
       height: 200px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .main-product {
+    &__description {
+      display: block;
+      font-size: 1.4rem;
+    }
+    &--list-display {
+      .product-info {
+        width: 80%;
+      }
+      .main-product__name,
+      .main-product__category {
+        text-align-last: left;
+      }
+      .main-product__price {
+        margin-top: 0.5em;
+        border-bottom: none;
+      }
     }
   }
 }
