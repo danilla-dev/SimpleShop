@@ -12,8 +12,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const ProductsActions = (props) => {
-  const { products, sortFnc, display, displayFnc, sortFromLowest } = props;
-  const { handleSortFromLowest } = useContext(ProductsContext);
+  const { display, displayFnc } = props;
+  const { handleSortFromLowest, sortFromLowest, filterProducts } =
+    useContext(ProductsContext);
 
   const displayIcon = display ? (
     <FontAwesomeIcon icon={faTableCells} />
@@ -38,8 +39,8 @@ const ProductsActions = (props) => {
         </div>
       </div>
       <p className="products-main-page__counter">
-        We found<span>{products.length}</span>
-        {products.length > 1 ? " products" : " product"} for you.
+        We found<span>{filterProducts.length}</span>
+        {filterProducts.length > 1 ? " products" : " product"} for you.
       </p>
     </div>
   );
