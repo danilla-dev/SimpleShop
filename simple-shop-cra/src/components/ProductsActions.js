@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ProductsContext } from "../Contexts/ProductsContext";
 
 import "../styles/ProductsActions.scss";
 
@@ -12,6 +13,7 @@ import {
 
 const ProductsActions = (props) => {
   const { products, sortFnc, display, displayFnc, sortFromLowest } = props;
+  const { handleSortFromLowest } = useContext(ProductsContext);
 
   const displayIcon = display ? (
     <FontAwesomeIcon icon={faTableCells} />
@@ -29,7 +31,7 @@ const ProductsActions = (props) => {
     <div className="products-actions">
       <div className="products-actions-buttons">
         <div className="products-actions-buttons__sort">
-          <button onClick={sortFnc}>{sortIcon}</button>
+          <button onClick={handleSortFromLowest}>{sortIcon}</button>
         </div>
         <div className="products-actions-buttons__display">
           <button onClick={displayFnc}>{displayIcon}</button>
