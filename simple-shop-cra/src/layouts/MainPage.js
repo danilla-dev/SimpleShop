@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Products from "../components/Products";
 import FilterWindow from "../components/FilterWindow";
@@ -7,6 +7,9 @@ import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
 
 const MainPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="main-page wrapper">
       <ProductsProvider>

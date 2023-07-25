@@ -8,10 +8,26 @@
 }
 .categories-description {
   display: flex;
+  margin: 4em 0;
+  border: 1px solid black;
+  transition: transform 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .categories-descriptions {
   &__Special {
     display: flex;
     flex-direction: row-reverse;
+  }
+  &-info {
+    padding: 2em;
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2.4rem;
+    }
   }
 }
