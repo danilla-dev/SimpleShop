@@ -15,25 +15,8 @@ const categories = [
 const Categories = ({ icon, showHideMenu }) => {
   const [isShowed, setShow] = React.useState();
 
-  const isTabletOrDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-
   const showCategories = () => {
     setShow(!isShowed);
-  };
-
-  const scrollToProducts = () => {
-    if (showHideMenu) {
-      showHideMenu();
-    }
-    showCategories();
-    const offsetShift = isTabletOrDesktop ? 90 : 110;
-    const productsSectionPosition =
-      document.querySelector(".products-main-page").offsetTop - offsetShift;
-    console.log(productsSectionPosition);
-    window.scrollTo({
-      top: productsSectionPosition,
-      behavior: "smooth",
-    });
   };
 
   const allCategories = categories.map((category, index) => {
@@ -42,7 +25,7 @@ const Categories = ({ icon, showHideMenu }) => {
         <NavLink
           to={category.path}
           className={category.cName + " " + "categories-list__category-link"}
-          onClick={showHideMenu && scrollToProducts}
+          onClick={showHideMenu && showCategories}
           exact
           activeClassName="categories-list__category-link--active"
         >

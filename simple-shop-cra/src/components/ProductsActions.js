@@ -13,8 +13,11 @@ import {
 
 const ProductsActions = (props) => {
   const { display, displayFnc } = props;
-  const { handleSortFromLowest, sortFromLowest, filterProducts } =
-    useContext(ProductsContext);
+  const {
+    handleSortFromLowest,
+    sortFromLowest,
+    filterProducts,
+  } = useContext(ProductsContext);
 
   const displayIcon = display ? (
     <FontAwesomeIcon icon={faTableCells} />

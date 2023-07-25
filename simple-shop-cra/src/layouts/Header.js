@@ -1,15 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Navigation from '../components/Navigation'
-import HeaderImage from '../components/HeaderImage'
+import React from "react";
+import { Link, Route } from "react-router-dom";
+import Navigation from "../components/Navigation";
+import HeaderImage from "../components/HeaderImage";
 
 const Header = () => {
-	return (
-		<>
-			<Navigation></Navigation>
-			<HeaderImage></HeaderImage>
-		</>
-	)
-}
+  return (
+    <>
+      <Navigation></Navigation>
+      <Route exact path="/">
+        <HeaderImage></HeaderImage>
+      </Route>
+    </>
+  );
+};
 
-export default Header
+export default Header;

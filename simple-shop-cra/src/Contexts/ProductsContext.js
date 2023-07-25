@@ -8,27 +8,29 @@ export const ProductsContext = createContext();
 const ProductsProvider = ({ children }) => {
   const location = useLocation();
   const [priceRange, setPriceRange] = useState();
-  const [sortFromLowest, setSortFromLowest] = useState(false);
+  const [sortFromLowest, setSortFromLowest] = useState();
   const searchCategory = location.pathname.split("/").pop();
+  const lastSortPref = localStorage.getItem("sortItems");
+ 
 
-  const handleFilterProductsByCategory = (category) => {
-    let filterProductsByCategory;
+  const handleFilterProducts = (category) => {
+    let filterProducts;
     if (sortFromLowest) {
       products.sort((a, b) => a.price - b.price);
     } else {
       products.sort((a, b) => b.price - a.price);
     }
     if (category) {
-      filterProductsByCategory = products.filter(
+      filterProducts = products.filter(
         (product) => product.category === category
       );
     } else {
-      filterProductsByCategory = products;
+      filterProducts = products;
     }
-    return filterProductsByCategory;
+    return filterProducts;
   };
 
-  let filterProducts = handleFilterProductsByCategory(searchCategory);
+  let filterProducts = handleFilterProducts(searchCategory);
 
   if (priceRange) {
     filterProducts = filterProducts.filter(
@@ -39,13 +41,19 @@ const ProductsProvider = ({ children }) => {
   const handleSortFromLowest = () => {
     setSortFromLowest(!sortFromLowest);
   };
+  const handleProductsRange = (priceRange) => {
+    setPriceRange(priceRange);
+  };
   const productsStatesValues = {
     handleSortFromLowest,
     sortFromLowest,
-    handleProductsRange: (priceRange) => setPriceRange(priceRange),
+    handleProductsRange,
     filterProducts,
   };
-
+  const saveSortPrefInLocalStorage = () => {
+    localStorage.setItem("sortItems", sortFromLowest || "false");
+  };
+  saveSortPrefInLocalStorage();
   return (
     <>
       <ProductsContext.Provider value={productsStatesValues}>

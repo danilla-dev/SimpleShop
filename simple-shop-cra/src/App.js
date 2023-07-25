@@ -10,6 +10,7 @@ import {
 import Header from "./layouts/Header";
 import MainPage from "./layouts/MainPage";
 import Footer from "./layouts/Footer";
+import HomePage from "./layouts/HomePage";
 
 class App extends Component {
   render() {
@@ -18,7 +19,14 @@ class App extends Component {
         <div className="App app-container">
           <header>{<Header />}</header>
           <main>
-            <section id="main-page">{<MainPage />}</section>
+            <Switch>
+              <Route exact path="/">
+                <section className="home-page-section">{<HomePage />}</section>
+              </Route>
+              <Route path="/products">
+                <section className="main-page-section">{<MainPage />}</section>
+              </Route>
+            </Switch>
           </main>
           <footer>{<Footer />}</footer>
         </div>
