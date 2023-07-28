@@ -6,7 +6,7 @@ const HomePageCategories = () => {
       name: "Guns",
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo. Similique, tempora? Optio commodi quo magni quae, nisi voluptatum saepe! Qui voluptatum magni mollitia quibusdam officiis ab magnam suscipit enim!",
-      img: "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
+      img: "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/ray-guyn-sm.jpg",
       path: "/products/Guns",
     },
     {
@@ -31,21 +31,26 @@ const HomePageCategories = () => {
       <div
         className={`categories-description categories-descriptions__${name}`}
       >
-        <img src={img} alt="" />
-        <div className="categories-descriptions-info">
-          <h2 className={`categories-descriptions-info__name-${name}`}>
-            {name}
-          </h2>
-          <p className={`categories-descriptions-info__description-${name}`}>
+        <div className="categories-descriptions__image">
+          <img src={img} alt="" />
+        </div>
+        <div className="categories-descriptions__info">
+          <h3 className={`categories-descriptions__info-name`}>{name}</h3>
+          <p className={`categories-descriptions__info-description`}>
             {description}
           </p>
-        <Link to={path}>GO!</Link>
+          <div className="categories-descriptions__link">
+            <Link to={path}>GO!</Link>
+          </div>
         </div>
       </div>
     );
   });
   return (
-    <div className="categories-descriptions">{categoriesDescriptions}</div>
+    <>
+      <h2>Check what we can offer you!</h2>
+      <div className="categories-descriptions">{categoriesDescriptions}</div>
+    </>
   );
 };
 
