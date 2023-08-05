@@ -1,18 +1,21 @@
-.home-page-section {
-  background-color: #02ab65;
-  background-image: url("../images/cropped-1920-1080-1172541.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
+
 .home-page {
   position: relative;
-  padding: 2em;
   h2 {
     text-align: center;
     color: white;
     font-size: 2.4rem;
     margin-top: 1.5em;
+  }
+  &__categories {
+    &-background {
+      padding: 2em;
+      padding-bottom: 6em;
+      background-image: url("../images/cropped-1920-1080-1172541.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
   }
 }
 .categories-description {

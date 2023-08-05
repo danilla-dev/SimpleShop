@@ -61,10 +61,12 @@ const HomePageCategories = () => {
     );
   });
   return (
-    <>
-      <h2>Check what we can offer you!</h2>
-      <div className="categories-descriptions">{categoriesDescriptions}</div>
-    </>
+    <div className="home-page__categories-background">
+      <div className="home-page__categories wrapper">
+        <h2>Check what we can offer you!</h2>
+        <div className="categories-descriptions">{categoriesDescriptions}</div>
+      </div>
+    </div>
   );
 };
 

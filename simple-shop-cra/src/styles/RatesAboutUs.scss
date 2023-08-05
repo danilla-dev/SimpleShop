@@ -1,0 +1,55 @@
+@import "colors";
+.rates-about-us {
+  padding: 5em 1em;
+  &__header-text {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2em;
+  }
+}
+.rate {
+  margin: 2em 0;
+  padding: 2em 1em;
+  border: 1px solid rgba(140, 134, 134, 0.47);
+  border-radius: 20px;
+  &__author {
+    display: flex;
+    margin-bottom: 2em;
+    &-photo {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+    &-name {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin: auto 0 auto 1em;
+    }
+  }
+  &__text {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 375px) {
+  .rate {
+    padding: 2em 1em;
+
+    &__author {
+      &-name {
+        font-size: 1.8rem;
+      }
+    }
+    &__text {
+      font-size: 1.4rem;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .rates {
+    display: flex;
+  }
+  .rate {
+    margin: 0 1em;
+  }
+}
