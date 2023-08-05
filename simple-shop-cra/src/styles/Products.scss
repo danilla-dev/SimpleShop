@@ -1,7 +1,12 @@
 @import "colors";
 
 .main-page {
-  margin-top: 150px;
+  padding-top: 150px;
+  background-image: url("../images/cropped-1920-1080-633151.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 .products-main-page {
   position: relative;
@@ -10,7 +15,7 @@
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  background-color: $products-section-background;
+  // background-color: $products-section-background;
   z-index: 1;
   &__list {
     list-style: none;

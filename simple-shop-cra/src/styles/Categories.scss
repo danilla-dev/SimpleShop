@@ -38,6 +38,7 @@
 .categories {
   border-top: 1px solid silver;
   border-bottom: 1px solid silver;
+  color: white;
   &-list {
     display: flex;
     align-items: center;
@@ -52,7 +53,7 @@
         width: 100%;
         font-size: 1.5rem;
         text-decoration: none;
-        color: black;
+        color: #fff;
         &--active {
           position: relative;
           &::after {
@@ -132,7 +133,7 @@
           border: none;
           text-align: left;
           &-link {
-            color: black;
+            color: white;
             margin-left: 1em;
             &--active {
               color: #0fb70f;
