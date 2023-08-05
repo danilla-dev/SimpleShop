@@ -17,11 +17,13 @@ const RatesAboutUs = () => {
     );
   });
   return (
-    <div className="rates-about-us wrapper">
-      <h4 className="rates-about-us__header-text">
-        Look what other users think about us!
-      </h4>
-      <div className="rates">{rates}</div>
+    <div className="rates-about-us__background">
+      <div className="rates-about-us wrapper">
+        <h4 className="rates-about-us__header-text">
+          Look what other users think about us!
+        </h4>
+        <div className="rates">{rates}</div>
+      </div>
     </div>
   );
 };

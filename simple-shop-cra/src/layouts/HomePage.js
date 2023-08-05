@@ -11,8 +11,8 @@ const HomePage = () => {
     <>
       <div className="home-page">
         <HomePageCategories />
-        <RatesAboutUs />
         <MostPopularProducts />
+        <RatesAboutUs />
       </div>
     </>
   );

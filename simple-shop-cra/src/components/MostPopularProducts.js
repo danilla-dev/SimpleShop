@@ -11,7 +11,15 @@ import "../styles/MostPopularProducts.scss";
 import { popularProducts } from "../db/PopularProducts";
 
 const MostPopularProducts = () => {
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 992px)" });
+
+  let percentageForSlides = 50;
+  if (isDesktop) {
+    percentageForSlides = 25;
+  } else if (isTablet) {
+    percentageForSlides = 33;
+  }
 
   const products = popularProducts.map((product, index) => {
     return (
@@ -19,7 +27,7 @@ const MostPopularProducts = () => {
         <div className={"product" + " " + product.title}>
           <div className="product-image">
             <img
-              src={isDesktop ? product.imageDesk : product.imageMobile}
+              src={isTablet ? product.imageDesk : product.imageMobile}
               alt=""
             />
           </div>
@@ -32,6 +40,7 @@ const MostPopularProducts = () => {
             </div>
             <div className="product__action-buttons">
               <button className="product__action-buttons-add">
+                <span>Add</span>
                 <FontAwesomeIcon className="cart-icon" icon={faCartPlus} />
               </button>
             </div>
@@ -43,8 +52,22 @@ const MostPopularProducts = () => {
   return (
     <div className="most-popular-products__background">
       <div className="most-popular-products wrapper">
+        <h2 className="most-popular-products__header">
+          Most popular products on last time.
+        </h2>
         <div className="most-popular-products__carousel">
-          <Carousel autoPlay="true" infiniteLoop="true">
+          <Carousel
+            autoPlay="true"
+            infiniteLoop="true"
+            stopOnHover="true"
+            showThumbs={false}
+            showArrows={true}
+            showStatus={false}
+            showIndicators={false}
+            centerMode={true}
+            centerSlidePercentage={percentageForSlides}
+            interval={5000}
+          >
             {products}
           </Carousel>
         </div>
