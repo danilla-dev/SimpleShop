@@ -3,8 +3,11 @@
 }
 .home-page {
   position: relative;
-  height: 1500px;
   background-color: #02ab65;
+  background-image: url("../images/cropped-1920-1080-1172541.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 2em;
   h2 {
     text-align: center;
@@ -14,128 +17,83 @@
   }
 }
 .categories-description {
-  // display: flex;
-  margin: 4em 0;
-  padding: 0.5em;
-  border: 1px solid rgb(22, 195, 45);
-  border-radius: 35px;
-  transition: transform 0.2s;
-  cursor: pointer;
-
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 16px 0 #04ab9275;
-  border-radius: 35px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-  }
-}
-.categories-descriptions {
-  &__Special {
-    .categories-descriptions__image {
-      float: right;
-      margin: 5px 5px 10px 10px;
+  position: relative;
+  margin: 2em 0;
+  width: 250px;
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+  &__image {
+    margin-top: 3em;
+    img {
+      height: 250px;
+      width: 250px;
     }
   }
   &__info {
-    padding: 0.5em;
+    font-size: 2rem;
     &-name {
+      position: absolute;
+      top: 0;
+      left: 50%;
       margin: 0.5em 0;
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
-    &-description {
-      font-size: 1.1rem;
-    }
-  }
-  &__image {
-    float: left;
-    margin: 5px 10px 10px 5px;
-    border-radius: 35px;
-    overflow: hidden;
-    img {
-      width: 150px;
-      height: 150px;
+      transform: translateX(-50%);
     }
   }
   &__link {
-    margin-top: 0.8em;
-    text-align: center;
+    margin: 0.5em 0;
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
+}
+.categories-descriptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 375px) {
   .categories-description {
-    a {
-      font-size: 2.2rem;
-    }
-  }
-  .categories-descriptions {
-    &__info {
-      &-description {
-        font-size: 1.3rem;
-      }
-    }
-  }
-}
-@media (min-width: 414px) {
-  .categories-description {
-    a {
-      font-size: 2.4rem;
-    }
-  }
-  .categories-descriptions {
-    &__info {
-      &-description {
-        font-size: 1.5rem;
-      }
-    }
+    width: 300px;
     &__image {
-      margin: 5px 15px 10px 5px;
       img {
-        width: 200px;
-        height: 200px;
-      }
-    }
-  }
-}
-@media (min-width: 768px) {
-  .categories-description {
-    padding: 1em;
-    margin: 6em 0;
-    min-height: 280px;
-
-    a {
-      font-size: 3rem;
-    }
-  }
-  .categories-descriptions {
-    &__Special {
-      .categories-descriptions__image {
-        float: right;
-        margin: auto 0;
-        margin-left: 15px;
+        height: 300px;
+        width: 300px;
       }
     }
     &__info {
       &-name {
         font-size: 2.5rem;
       }
-      &-description {
-        font-size: 1.7rem;
+    }
+    &__link {
+      a {
+        font-size: 3rem;
+        font-weight: bold;
       }
     }
-    &__image {
-      margin: auto 0;
-      margin-right: 15px;
-      img {
-        width: 250px;
-        height: 250px;
-      }
+  }
+}
+@media (min-width: 414px) {
+}
+@media (min-width: 768px) {
+  .home-page {
+    h2 {
+      margin: 1.5em 0;
+    }
+    .categories-description {
+      position: relative;
+      margin: 2em;
+    }
+    .categories-descriptions {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
