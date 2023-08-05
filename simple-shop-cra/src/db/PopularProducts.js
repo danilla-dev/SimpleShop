@@ -59,4 +59,16 @@ export const popularProducts = [
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/plumbus-lg.jpg",
     path: "",
   },
+  {
+    title: "Portal gun",
+    category: "Special",
+    price: 320,
+    description:
+      "Unlock the wonders of the multiverse with the Portal Gun! Create instant portals to traverse dimensions and embark on thrilling adventures. Inspired by Rick's ingenuity, this gadget lets you bend the rules of space and time effortlessly. Aim, shoot, and prepare for mind-bending exploration!",
+    imageMobile:
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-sm.jpg",
+    imageDesk:
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1687886641/InterStore/portal-lg.jpg",
+    path: "",
+  },
 ];

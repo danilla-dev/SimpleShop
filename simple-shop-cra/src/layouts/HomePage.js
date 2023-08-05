@@ -5,6 +5,7 @@ import "../styles/HomePage.scss";
 import HomePageCategories from "../components/HomePageCategories";
 import RatesAboutUs from "../components/RatesAboutUs";
 import MostPopularProducts from "../components/MostPopularProducts";
+import NewsletterSubscribe from "../components/NewsletterSubscribe";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,8 @@ const HomePage = () => {
         <HomePageCategories />
         <MostPopularProducts />
         <RatesAboutUs />
+        <NewsletterSubscribe />
+        <div className="test" style={{ height: 400 }}></div>
       </div>
     </>
   );

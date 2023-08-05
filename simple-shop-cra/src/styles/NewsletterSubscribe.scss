@@ -1,0 +1,42 @@
+.newsletter-subscribe {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: 3em;
+  /////////////////////////////
+
+  background: rgba(242, 103, 183, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  &__background {
+    background-image: url("../images/cropped-1920-1080-909641.png");
+    background-size: cover;
+    background-position: center;
+  }
+  h4 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 5rem;
+  }
+  &__form {
+    margin: auto 0;
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    label {
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+    }
+    input {
+      font-size: 2rem;
+      border-radius: 20px;
+      padding: 0.5em 1em;
+    }
+  }
+}

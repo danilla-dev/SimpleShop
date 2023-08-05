@@ -1,13 +1,19 @@
 import React from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import "../styles/RatesAboutUs.scss";
 
 import { ratesAboutUs } from "../db/Rates";
 const RatesAboutUs = () => {
+  AOS.init({ once: true });
+  let delay = 0;
   const rates = ratesAboutUs.map((rate) => {
+    delay += 500;
     const { authorName, authorAvatar, rateText } = rate;
     return (
-      <div className="rate">
+      <div data-aos="flip-up" data-aos-delay={`${delay}`} className="rate">
         <div className="rate__author">
           <img className="rate__author-photo" src={authorAvatar} alt="" />
           <p className="rate__author-name">{authorName}</p>
