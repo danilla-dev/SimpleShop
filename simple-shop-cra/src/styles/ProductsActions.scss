@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: #ffff;
+  color: #000000;
   &-buttons {
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@
       svg {
         font-size: 2.5rem;
         margin-left: 0.25em;
-        color: #ffff;
+        color: #ffffff;
       }
     }
   }
@@ -52,11 +52,13 @@
     justify-content: space-between;
     &-buttons {
       border: none;
+      background-color: transparent;
       &__sort,
       &__display {
         border: none;
         svg {
           font-size: 2.5rem;
+          color: white;
         }
       }
       &__sort {

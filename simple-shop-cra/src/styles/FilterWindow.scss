@@ -1,9 +1,14 @@
+@import "colors";
 .filter-window {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 20px;
-  border-top: 1px solid rgba(128, 128, 128, 0.419);
+  border-radius: 20px 20px 0 0;
+  border-top: 1px solid rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(1.6px);
+  -webkit-backdrop-filter: blur(1.6px);
+  color: rgb(255, 255, 255);
   &__title {
     padding: 0.75em 0;
     text-align: center;
@@ -12,10 +17,12 @@
     cursor: pointer;
   }
   &__filter-options {
+    visibility: hidden;
     height: 0;
-    transition: height 0.3s;
+    transition: 0.3s;
     &--active {
       height: 250px;
+      visibility: visible;
     }
   }
 }
@@ -52,11 +59,16 @@
     max-width: 250px;
     min-height: 550px;
     border: 3px solid rgba(3, 160, 97, 0.433);
-    box-shadow: 0 0px 10px 1px rgba(3, 89, 55, 0.233);
     margin-left: 1em;
     margin-bottom: 1em;
+    border-radius: 20px 0 0 20px;
+    border-right: transparent;
+
     &__title {
       cursor: unset;
+    }
+    &__filter-options {
+      visibility: visible;
     }
   }
 }

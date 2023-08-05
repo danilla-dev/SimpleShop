@@ -1,13 +1,12 @@
 .home-page-section {
   background-color: #02ab65;
-}
-.home-page {
-  position: relative;
-  background-color: #02ab65;
   background-image: url("../images/cropped-1920-1080-1172541.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+.home-page {
+  position: relative;
   padding: 2em;
   h2 {
     text-align: center;
@@ -24,8 +23,9 @@
   background-color: #fff;
   text-align: center;
   overflow: hidden;
+  cursor: pointer;
   &__image {
-    margin-top: 3em;
+    margin-top: 5em;
     img {
       height: 250px;
       width: 250px;
@@ -42,11 +42,48 @@
     }
   }
   &__link {
+    position: relative;
     margin: 0.5em 0;
+    z-index: 5;
     a {
       text-decoration: none;
       color: black;
     }
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+    overflow: hidden;
+    &-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding: 0.5em;
+    }
+  }
+  &:hover &__description {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  &:hover &__link a {
+    color: white;
+  }
+  &:hover &__info-name {
+    color: white;
+    z-index: 1;
   }
 }
 .categories-descriptions {
@@ -84,16 +121,26 @@
     h2 {
       margin: 1.5em 0;
     }
-    .categories-description {
-      position: relative;
-      margin: 2em;
+  }
+  .categories-description {
+    position: relative;
+    margin: 2em;
+    &__link {
+      a {
+        color: white;
+      }
     }
-    .categories-descriptions {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+    &__description {
+      &-text {
+        font-size: 1.8rem;
+      }
     }
+  }
+  .categories-descriptions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }

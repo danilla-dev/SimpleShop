@@ -52,6 +52,11 @@ const HomePageCategories = () => {
             <Link to={path}>GO!</Link>
           </div>
         </div>
+        <div className="categories-description__description">
+          <p className="categories-description__description-text">
+            {description}
+          </p>
+        </div>
       </div>
     );
   });
