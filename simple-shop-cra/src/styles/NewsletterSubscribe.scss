@@ -30,7 +30,7 @@
       content: "";
       position: absolute;
       width: 120%;
-      height: 120%;
+      height: 50%;
       background: linear-gradient(
         to right,
         rgba(255, 255, 255, 0) 0%,
@@ -39,7 +39,7 @@
       );
       transform: translateX(-100%) rotate(-60deg);
       animation-delay: 5s;
-      animation: flash 4s cubic-bezier(0.98, 0.39, 0, 0.39) infinite;
+      animation: flash 4s linear infinite;
     }
   }
   h4 {

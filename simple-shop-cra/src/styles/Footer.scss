@@ -1,22 +1,112 @@
-.footer {
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   &__background {
-    height: 400px;
-    background-color: greenyellow;
+    padding: 1em;
+    background-color: #ececec;
+    background-image: url("https://res.cloudinary.com/di3axjqgh/image/upload/v1691333748/InterStore/WEBP/contact-us.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
-  .nav__logo {
-    justify-content: center;
+  &__image {
+    img {
+      height: 400px;
+      aspect-ratio: 16 / 9;
+    }
+  }
+  &__header {
+    margin-bottom: 1em;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline green;
+    color: white;
+  }
+  &__contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 1em;
+    // flex-grow: 1;
   }
   form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    color: white;
     label {
       font-size: 1.2rem;
       margin-bottom: 0.25em;
     }
     input {
+      padding: 0.75em;
       margin-bottom: 1em;
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+    textarea {
+      padding: 1em;
+      border-radius: 10px;
+      resize: none;
+    }
+    button {
+      padding: 1em 0.5em;
+      margin-top: 0.5em;
+      border-radius: 10px;
+      border: 1px solid black;
+      color: #24ba7b;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  .nav__logo {
+    padding: 0.25em;
+    margin: 1em 0;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #24ba7b;
+    &-icon {
+      color: #24ba7b;
+      font-size: 3rem;
+    }
+  }
+}
+.author-description {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: black;
+  color: white;
+  a {
+    text-decoration: none;
+    color: #24ba7b;
+  }
+}
+@media (min-width: 768px) {
+  .contact-us {
+    display: flex;
+    flex-direction: row;
+    &__background {
+      padding: 3em 1em;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .contact-us {
+    form {
+      label {
+        font-size: 1.6rem;
+        margin-bottom: 0.25em;
+      }
+      input {
+        padding: 0.75em;
+        font-size: 1.4rem;
+      }
+      textarea {
+        font-size: 1.4rem;
+      }
     }
   }
 }
