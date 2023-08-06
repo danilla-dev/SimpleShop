@@ -1,0 +1,22 @@
+.footer {
+  &__background {
+    height: 400px;
+    background-color: greenyellow;
+  }
+  .nav__logo {
+    justify-content: center;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    label {
+      font-size: 1.2rem;
+      margin-bottom: 0.25em;
+    }
+    input {
+      margin-bottom: 1em;
+    }
+  }
+}

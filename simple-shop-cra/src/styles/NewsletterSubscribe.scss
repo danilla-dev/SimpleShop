@@ -1,4 +1,13 @@
 @import "colors";
+
+@keyframes flash {
+  0% {
+    transform: translateX(-100%) rotate(60deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(60deg);
+  }
+}
 .newsletter-subscribe {
   display: flex;
   flex-direction: column;
@@ -12,9 +21,26 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   &__background {
+    position: relative;
     background-image: url("https://res.cloudinary.com/di3axjqgh/image/upload/v1691312697/InterStore/WEBP/newsletter-bg.webp");
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.297) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%) rotate(-60deg);
+      animation-delay: 5s;
+      animation: flash 4s cubic-bezier(0.98, 0.39, 0, 0.39) infinite;
+    }
   }
   h4 {
     margin-top: 2em;
@@ -65,7 +91,7 @@
       transition: box-shadow 0.3s;
       cursor: pointer;
       &:hover {
-        box-shadow: inset 0px 0px 36px -20px rgba(66, 68, 90, 0.597);
+        box-shadow: inset 0px 0px 36px -20px rgba(66, 90, 76, 0.757);
       }
     }
   }

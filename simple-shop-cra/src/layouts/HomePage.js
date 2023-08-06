@@ -17,9 +17,6 @@ const HomePage = () => {
         <NewsletterSubscribe />
         <RatesAboutUs />
         <StoreStats />
-        <div className="test" style={{ height: 400, backgroundColor: "gray" }}>
-          FOOTER
-        </div>
       </div>
     </>
   );
