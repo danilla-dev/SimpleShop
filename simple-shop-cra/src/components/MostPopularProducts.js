@@ -16,9 +16,9 @@ const MostPopularProducts = () => {
 
   let percentageForSlides = 50;
   if (isDesktop) {
-    percentageForSlides = 25;
+    percentageForSlides = 30;
   } else if (isTablet) {
-    percentageForSlides = 33;
+    percentageForSlides = 40;
   }
 
   const products = popularProducts.map((product, index) => {

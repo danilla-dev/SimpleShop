@@ -4,7 +4,7 @@
   padding-top: 150px;
   min-height: 100vh;
   &-section {
-    background-image: url("../images/cropped-1920-1080-633151.jpg");
+    background-image: url("https://res.cloudinary.com/di3axjqgh/image/upload/v1691312697/InterStore/WEBP/shop-bg.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -95,7 +95,7 @@
   }
 }
 
-@media (min-width: 952px) {
+@media (min-width: 980px) {
   .products-main-page__list {
     grid-template-columns: repeat(3, 1fr);
     &--list-display {

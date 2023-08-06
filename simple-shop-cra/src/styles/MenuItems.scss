@@ -80,13 +80,23 @@
       }
       &-list {
         position: absolute;
+        justify-content: space-between;
+        margin-bottom: 0;
         top: 45px;
         left: 0;
         width: 100%;
-        background-color: rgb(66, 135, 106);
+        border: 1px solid #00693d85;
+        border-top: none;
+        background-color: #ffff;
         &__category {
-          width: 70%;
-          border-bottom: 2px solid rgba(192, 192, 192, 0.2);
+          width: 100%;
+          border-bottom: none;
+          margin: 0;
+          padding: 1em 0;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: #73a85b2e;
+          }
         }
       }
     }

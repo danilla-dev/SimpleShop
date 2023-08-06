@@ -20,7 +20,7 @@ laudantium quod placeat!`,
   {
     authorName: "Mr. Nimbus",
     authorAvatar:
-      "https://res.cloudinary.com/di3axjqgh/image/upload/v1691262162/InterStore/Nimbus-avatar.png",
+      "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/nimbus-avatar.webp",
     rateText: ` Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ipsa
 doloribus quaerat voluptatum vel, dolorem magnam nobis natus, vero
 perferendis, corrupti quos dolores. Temporibus nam nihil distinctio

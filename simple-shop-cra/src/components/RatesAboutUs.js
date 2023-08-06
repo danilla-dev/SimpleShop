@@ -7,7 +7,7 @@ import "../styles/RatesAboutUs.scss";
 
 import { ratesAboutUs } from "../db/Rates";
 const RatesAboutUs = () => {
-  AOS.init({ once: true });
+  AOS.init({ once: true, offset: 200 });
   let delay = 0;
   const rates = ratesAboutUs.map((rate) => {
     delay += 500;

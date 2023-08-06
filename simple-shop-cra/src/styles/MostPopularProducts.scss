@@ -3,6 +3,7 @@
 .most-popular-products {
   padding: 4em 0;
   padding-bottom: 6em;
+  padding: 6em 1em;
   &__background {
     background-color: #ffffff;
   }
@@ -63,6 +64,7 @@
     }
   }
 }
+
 @media (min-width: 414px) {
   .most-popular-products {
     h2 {

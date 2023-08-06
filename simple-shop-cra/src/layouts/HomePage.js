@@ -6,6 +6,7 @@ import HomePageCategories from "../components/HomePageCategories";
 import RatesAboutUs from "../components/RatesAboutUs";
 import MostPopularProducts from "../components/MostPopularProducts";
 import NewsletterSubscribe from "../components/NewsletterSubscribe";
+import StoreStats from "../components/StoreStats";
 
 const HomePage = () => {
   return (
@@ -15,7 +16,10 @@ const HomePage = () => {
         <MostPopularProducts />
         <NewsletterSubscribe />
         <RatesAboutUs />
-        <div className="test" style={{ height: 400 }}></div>
+        <StoreStats />
+        <div className="test" style={{ height: 400, backgroundColor: "gray" }}>
+          FOOTER
+        </div>
       </div>
     </>
   );
