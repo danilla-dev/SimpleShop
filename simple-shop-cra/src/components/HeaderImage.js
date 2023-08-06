@@ -12,10 +12,18 @@ const HeaderImage = () => {
   return (
     <div className="header-image">
       {isMobile && (
-        <img src={heroImageMobile} alt="Falling Rick and Morty hero image" />
+        <img
+          loading="lazy"
+          src={heroImageMobile}
+          alt="Falling Rick and Morty hero image"
+        />
       )}
       {isTabletOrDesktop && (
-        <img src={heroImageDesktop} alt="Falling Rick and Morty hero image" />
+        <img
+          loading="lazy"
+          src={heroImageDesktop}
+          alt="Falling Rick and Morty hero image"
+        />
       )}
     </div>
   );

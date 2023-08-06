@@ -27,6 +27,7 @@ const Product = ({ listDisplay }) => {
         <div className={productCName}>
           <div className="product-image">
             <img
+              loading="lazy"
               className="main-product__img"
               src={isDesktop ? product.imageDesk : product.imageMobile}
               alt=""
