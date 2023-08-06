@@ -45,26 +45,27 @@ const HomePageCategories = () => {
         </div>
         <div className="categories-description__info">
           <h3 className={`categories-description__info-name`}>{name}</h3>
-          {/* <p className={`categories-descriptions__info-description`}>
-            {description}
-          </p> */}
-          <div className="categories-description__link">
-            <Link to={path}>GO!</Link>
-          </div>
         </div>
         <div className="categories-description__description">
           <p className="categories-description__description-text">
             {description}
           </p>
+          <div className="categories-description__link">
+            <Link to={path}>GO!</Link>
+          </div>
         </div>
       </div>
     );
   });
   return (
     <div className="home-page__categories-background">
-      <div className="home-page__categories wrapper">
-        <h2>Check what we can offer you!</h2>
-        <div className="categories-descriptions">{categoriesDescriptions}</div>
+      <div className="home-page__categories-background-shadow">
+        <div className="home-page__categories wrapper">
+          <h2>Check what we can offer you!</h2>
+          <div className="categories-descriptions">
+            {categoriesDescriptions}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -13,8 +13,8 @@ const HomePage = () => {
       <div className="home-page">
         <HomePageCategories />
         <MostPopularProducts />
-        <RatesAboutUs />
         <NewsletterSubscribe />
+        <RatesAboutUs />
         <div className="test" style={{ height: 400 }}></div>
       </div>
     </>

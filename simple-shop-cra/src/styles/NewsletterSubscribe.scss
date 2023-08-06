@@ -1,14 +1,14 @@
+@import "colors";
 .newsletter-subscribe {
   display: flex;
   flex-direction: column;
-  height: 400px;
-  padding: 3em;
+  padding: 1em;
   /////////////////////////////
 
-  background: rgba(242, 103, 183, 0.2);
+  background: rgba(195, 21, 123, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   &__background {
@@ -17,26 +17,56 @@
     background-position: center;
   }
   h4 {
+    margin-top: 2em;
     text-align: center;
+    font-size: 2em;
     color: rgb(0, 0, 0);
-    font-size: 5rem;
   }
   &__form {
-    margin: auto 0;
+    margin: 3em 0;
     form {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
     label {
-      font-size: 4rem;
+      margin-bottom: 0.5em;
+      font-size: 2rem;
       font-weight: bold;
-      color: white;
+      color: rgb(0, 0, 0);
     }
+
     input {
+      margin-bottom: 0.5em;
+      padding: 0.5em 1em;
       font-size: 2rem;
       border-radius: 20px;
+      border: 1px solid black;
+      background: rgba(202, 85, 153, 0.556);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1x);
+      &::placeholder {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.482);
+      }
+    }
+    button {
       padding: 0.5em 1em;
+      border-radius: 20px;
+      border: 1px solid#075207;
+      font-size: 2rem;
+      font-weight: bold;
+      // background-color: $button-card;
+      // color: $button-card-font;
+      background-color: $money-color;
+      color: $button-card;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+      &:hover {
+        box-shadow: inset 0px 0px 36px -20px rgba(66, 68, 90, 0.597);
+      }
     }
   }
 }

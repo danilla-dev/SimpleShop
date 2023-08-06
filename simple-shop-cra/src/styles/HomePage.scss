@@ -1,4 +1,4 @@
-
+@import "colors";
 .home-page {
   position: relative;
   h2 {
@@ -9,18 +9,26 @@
   }
   &__categories {
     &-background {
-      padding: 2em;
-      padding-bottom: 6em;
       background-image: url("../images/cropped-1920-1080-1172541.png");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      &-shadow {
+        padding: 2em;
+        padding-bottom: 6em;
+        background: rgba(85, 8, 100, 0.244);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.5px);
+        -webkit-backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
     }
   }
 }
 .categories-description {
   position: relative;
   margin: 2em 0;
+  padding-bottom: 6em;
   width: 250px;
   border-radius: 20px;
   background-color: #fff;
@@ -55,6 +63,7 @@
   }
   &__description {
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: absolute;
     opacity: 0;
@@ -70,9 +79,10 @@
     transition: 0.3s;
     // overflow: hidden;
     &-text {
+      padding: 0.5em;
+      margin-top: 4em;
       font-size: 1.4rem;
       font-weight: bold;
-      padding: 0.5em;
     }
   }
   &:hover &__description {
@@ -82,7 +92,7 @@
     border-radius: 0;
   }
   &:hover &__link a {
-    color: white;
+    color: $money-color;
   }
   &:hover &__info-name {
     color: white;
