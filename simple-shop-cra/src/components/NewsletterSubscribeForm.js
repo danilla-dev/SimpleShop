@@ -1,6 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { nanoid } from "nanoid";
 import { getDatabase, ref, set, child, get } from "firebase/database";
+// import emailjs from "@emailjs/browser";
 
 import { app } from "../db/firebaseConfig";
 
@@ -9,6 +10,21 @@ import { PopupContext } from "../Contexts/PopupContext";
 const NewsletterSubscribeForm = () => {
   const [userEmail, setUserEmail] = useState("");
   const { setSubscribeNewsletter, setIsDoubleEmail } = useContext(PopupContext);
+  const form = useRef();
+
+  // const sendEmail = (form) => {
+  //   const TEMPLATE = "Newsletter_template";
+  //   const YOUR_SERVICE_ID = "service_dcajkle";
+  //   const PUBLIC_KEY = "2QxF7_EE2bOnWRvdZ";
+  //   emailjs.sendForm(YOUR_SERVICE_ID, TEMPLATE, form.current, PUBLIC_KEY).then(
+  //     (result) => {
+  //       console.log(result.text);
+  //     },
+  //     (error) => {
+  //       console.log(error.text);
+  //     }
+  //   );
+  // };
 
   const writeUserData = async (mail) => {
     console.log("ok wysyłamy maila");
@@ -18,6 +34,7 @@ const NewsletterSubscribeForm = () => {
       mail,
     });
     setSubscribeNewsletter(true);
+    // sendEmail(form);
   };
   // --------------------------------------------------------------
   const checkForUserDouble = (users) => {
@@ -54,19 +71,19 @@ const NewsletterSubscribeForm = () => {
         console.error(error);
       });
   };
-  // --------------------------------------------------------------
 
+  // --------------------------------------------------------------
   const handleSubmit = (e) => {
     e.preventDefault();
     getAllNewsletterUsers();
   };
-  // --------------------------------------------------------------
 
+  // --------------------------------------------------------------
   const handleOnChange = (e) => {
     setUserEmail(e.target.value);
   };
-  // --------------------------------------------------------------
 
+  // --------------------------------------------------------------
   return (
     <div className="newsletter-subscribe__form">
       <form onSubmit={handleSubmit}>
@@ -74,11 +91,12 @@ const NewsletterSubscribeForm = () => {
         <input
           id="email-for-newsletter"
           type="text"
+          // name="user_email"
           placeholder="Your e-mail"
           onChange={handleOnChange}
           value={userEmail}
         />
-        <button className="submit-btn">Subscribe</button>
+        <button className="submit-btn">Subscriasdbe</button>
       </form>
     </div>
   );
