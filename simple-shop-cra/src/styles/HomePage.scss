@@ -9,10 +9,9 @@
   }
   &__categories {
     &-background {
-      background-image: url("https://res.cloudinary.com/di3axjqgh/image/upload/v1691312697/InterStore/WEBP/categories-bg.webp");
+      background-image: url("https://res.cloudinary.com/di3axjqgh/image/upload/v1691611694/InterStore/WEBP/categories-bg-sm.webp");
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
       &-shadow {
         padding: 2em;
         padding-bottom: 6em;
@@ -155,5 +154,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+}
+@media (min-width: 996px) {
+  .home-page {
+    &__categories {
+      &-background {
+        background-image: url("https://res.cloudinary.com/di3axjqgh/image/upload/v1691312697/InterStore/WEBP/categories-bg.webp");
+        background-attachment: fixed;
+      }
+    }
   }
 }
