@@ -1,24 +1,30 @@
 import "./styles/App.scss";
-import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  Switch,
-  NavLink,
-} from "react-router-dom";
+import React, { Component, useContext, useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+import { app } from "./db/firebaseConfig";
+
 import Header from "./layouts/Header";
 import MainPage from "./layouts/MainPage";
 import Footer from "./layouts/Footer";
 import HomePage from "./layouts/HomePage";
 import NewsletterPopup from "./components/NewsletterPopup";
+import LoadingPage from "./components/LoadingPage";
+import RegisterPage from "./layouts/RegisterPage";
+import LoginPage from "./layouts/LoginPage";
 
 import PopupProvider from "./Contexts/PopupContext";
+import { UserContext } from "./Contexts/userContext";
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
+const App = () => {
+  const { isLoading } = useContext(UserContext);
+  return (
+    <Router>
+      {isLoading ? (
+        <LoadingPage />
+      ) : (
         <div className="App app-container">
           <PopupProvider>
             <NewsletterPopup />
@@ -35,14 +41,24 @@ class App extends Component {
                     {<MainPage />}
                   </section>
                 </Route>
+                <Route exact path="/login">
+                  <section className="login-page-section">
+                    {<LoginPage />}
+                  </section>
+                </Route>
+                <Route exact path="/register">
+                  <section className="register-page-section">
+                    {<RegisterPage />}
+                  </section>
+                </Route>
               </Switch>
             </main>
             <footer>{<Footer />}</footer>
           </PopupProvider>
         </div>
-      </Router>
-    );
-  }
-}
+      )}
+    </Router>
+  );
+};
 
 export default App;

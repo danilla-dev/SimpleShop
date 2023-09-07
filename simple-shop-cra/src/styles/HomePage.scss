@@ -67,10 +67,9 @@
     position: absolute;
     opacity: 0;
     top: 50%;
-    left: 50%;
-    height: 40%;
-    width: 40%;
-    border-radius: 50%;
+    left: 150%;
+    height: 100%;
+    width: 100%;
     color: white;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
@@ -86,8 +85,7 @@
   }
   &:hover &__description {
     opacity: 1;
-    height: 100%;
-    width: 100%;
+    left: 50%;
     border-radius: 0;
   }
   &:hover &__link a {

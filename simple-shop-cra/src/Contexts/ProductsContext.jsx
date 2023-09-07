@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import products from "../db/products";
@@ -11,7 +11,6 @@ const ProductsProvider = ({ children }) => {
   const [sortFromLowest, setSortFromLowest] = useState();
   const searchCategory = location.pathname.split("/").pop();
   const lastSortPref = localStorage.getItem("sortItems");
- 
 
   const handleFilterProducts = (category) => {
     let filterProducts;

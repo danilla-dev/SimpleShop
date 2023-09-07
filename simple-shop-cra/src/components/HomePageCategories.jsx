@@ -36,10 +36,13 @@ const HomePageCategories = () => {
     },
   ];
 
-  categoriesDescriptions = categoriesDescriptions.map((desc) => {
+  categoriesDescriptions = categoriesDescriptions.map((desc, index) => {
     const { name, description, img, imgLG, path } = desc;
     return (
-      <div className={`categories-description categories-description__${name}`}>
+      <div
+        key={index}
+        className={`categories-description categories-description__${name}`}
+      >
         <div className="categories-description__image">
           <img src={isTablet ? imgLG : img} alt="" />
         </div>

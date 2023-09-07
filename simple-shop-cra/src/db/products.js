@@ -5,7 +5,7 @@ const products = [
     price: 320,
     description:
       "Unlock the wonders of the multiverse with the Portal Gun! Create instant portals to traverse dimensions and embark on thrilling adventures. Inspired by Rick's ingenuity, this gadget lets you bend the rules of space and time effortlessly. Aim, shoot, and prepare for mind-bending exploration!",
-      imageMobile:
+    imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/portal-gun-sm.webp",
     imageDesk:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/portal-gun-lg.webp",
@@ -29,7 +29,7 @@ const products = [
     price: 270,
     description:
       'Unleash the power of the "Ray Gun" and become an interdimensional warrior to be reckoned with! This cutting-edge laser weapon is designed to neutralize adversaries from various dimensions. Its advanced laser technology delivers swift and precise firepower against any interdimensional threat you may encounter. Equip yourself with the extraordinary "Ray Gun" and conquer the challenges of the multiverse in style!',
-      imageMobile:
+    imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/ray-gun-sm.webp",
     imageDesk:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/ray-gun-lg.webp",
@@ -41,7 +41,7 @@ const products = [
     price: 220,
     description:
       'Unleash the power of the "Ray Gun" and become an interdimensional warrior to be reckoned with! This cutting-edge laser weapon is designed to neutralize adversaries from various dimensions. Its advanced laser technology delivers swift and precise firepower against any interdimensional threat you may encounter. Equip yourself with the extraordinary "Ray Gun" and conquer the challenges of the multiverse in style!',
-      imageMobile:
+    imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/ray-gun-sm.webp",
     imageDesk:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/ray-gun-lg.webp",
@@ -53,7 +53,7 @@ const products = [
     price: 200,
     description:
       "Unlock the wonders of the multiverse with the Portal Gun! Create instant portals to traverse dimensions and embark on thrilling adventures. Inspired by Rick's ingenuity, this gadget lets you bend the rules of space and time effortlessly. Aim, shoot, and prepare for mind-bending exploration!",
-      imageMobile:
+    imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/portal-gun-sm.webp",
     imageDesk:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/portal-gun-lg.webp",
@@ -65,7 +65,7 @@ const products = [
     price: 200,
     description:
       "Unlock the wonders of the multiverse with the Portal Gun! Create instant portals to traverse dimensions and embark on thrilling adventures. Inspired by Rick's ingenuity, this gadget lets you bend the rules of space and time effortlessly. Aim, shoot, and prepare for mind-bending exploration!",
-      imageMobile:
+    imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/portal-gun-sm.webp",
     imageDesk:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/portal-gun-lg.webp",
@@ -77,7 +77,7 @@ const products = [
     price: 200,
     description:
       "Unlock the wonders of the multiverse with the Portal Gun! Create instant portals to traverse dimensions and embark on thrilling adventures. Inspired by Rick's ingenuity, this gadget lets you bend the rules of space and time effortlessly. Aim, shoot, and prepare for mind-bending exploration!",
-      imageMobile:
+    imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/portal-gun-sm.webp",
     imageDesk:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/portal-gun-lg.webp",
@@ -101,7 +101,7 @@ const products = [
     price: 200,
     description:
       'Unleash the power of the "Ray Gun" and become an interdimensional warrior to be reckoned with! This cutting-edge laser weapon is designed to neutralize adversaries from various dimensions. Its advanced laser technology delivers swift and precise firepower against any interdimensional threat you may encounter. Equip yourself with the extraordinary "Ray Gun" and conquer the challenges of the multiverse in style!',
-      imageMobile:
+    imageMobile:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/ray-gun-sm.webp",
     imageDesk:
       "https://res.cloudinary.com/di3axjqgh/image/upload/v1691312698/InterStore/WEBP/ray-gun-lg.webp",
@@ -120,5 +120,5 @@ const products = [
     path: "",
   },
 ];
-console.log(products);
+
 export default products;

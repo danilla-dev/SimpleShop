@@ -9,11 +9,16 @@ import { ratesAboutUs } from "../db/Rates";
 const RatesAboutUs = () => {
   AOS.init({ once: true, offset: 200 });
   let delay = 0;
-  const rates = ratesAboutUs.map((rate) => {
+  const rates = ratesAboutUs.map((rate, index) => {
     delay += 500;
     const { authorName, authorAvatar, rateText } = rate;
     return (
-      <div data-aos="flip-up" data-aos-delay={`${delay}`} className="rate">
+      <div
+        key={index}
+        data-aos="flip-up"
+        data-aos-delay={`${delay}`}
+        className="rate"
+      >
         <div className="rate__author">
           <img className="rate__author-photo" src={authorAvatar} alt="" />
           <p className="rate__author-name">{authorName}</p>

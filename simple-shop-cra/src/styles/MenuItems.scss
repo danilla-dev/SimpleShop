@@ -16,7 +16,7 @@
     &-list {
       flex-direction: column;
       background-color: black;
-      animation: show-categories 0.3s forwards;
+      // animation: show-categories 0.3s forwards;
       &__category {
         width: 70%;
         border-bottom: 2px solid rgba(192, 192, 192, 0.2);
@@ -30,7 +30,7 @@
       }
       &--hide {
         margin-top: 3em;
-        animation: hide-categories 0.3s forwards;
+        // animation: hide-categories 0.3s forwards;
       }
     }
   }
@@ -72,7 +72,6 @@
     align-items: center;
     height: 70px;
     background-color: transparent;
-    margin-right: 20px;
     .categories {
       color: white;
       &-text {
@@ -82,7 +81,7 @@
         position: absolute;
         justify-content: space-between;
         margin-bottom: 0;
-        top: 45px;
+        top: 50px;
         left: 0;
         width: 100%;
         border: 1px solid #00693d85;
@@ -97,6 +96,12 @@
           &:hover {
             background-color: #73a85b2e;
           }
+          a {
+            font-size: 2rem;
+          }
+        }
+        &--hide {
+          display: none;
         }
       }
     }
@@ -104,7 +109,28 @@
       margin: 0 1em;
       a,
       svg {
-        font-size: 1.8rem;
+        font-size: 3rem;
+      }
+      span {
+        display: none;
+      }
+      a {
+        position: relative;
+        z-index: 1;
+        .cart-count {
+          position: absolute;
+          display: inline-block;
+          padding: 0.1em;
+          transform: translate(-50%, -50%);
+          left: 90%;
+          top: 5%;
+          font-size: 2.2rem;
+          font-weight: bold;
+          text-align: center;
+          color: rgb(255, 0, 0);
+          // background-color: #098954;
+          z-index: 10;
+        }
       }
     }
   }
